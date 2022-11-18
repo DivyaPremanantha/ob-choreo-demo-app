@@ -23,19 +23,19 @@ export const Navbar = ({ username }) => {
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" style={{color:'#d7e2de', fontSize:'18px'}} href="/Accounts">
+              <a className="nav-link" style={{color:'#d7e2de', fontSize:'18px'}} href="">
                 Accounts
               </a>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" style={{color:'#d7e2de', fontSize:'18px'}} href="/Offers">
+              <a className="nav-link" style={{color:'#d7e2de', fontSize:'18px'}} href="">
                 Offers
               </a>
             </li>
 
             <li className="nav-item">
-              <a className="font-theme-light nav-link" style={{color:'#d7e2de', fontSize:'18px'}} href="/Investments">
+              <a className="font-theme-light nav-link" style={{color:'#d7e2de', fontSize:'18px'}} href="">
                 Investments
               </a>
             </li>
