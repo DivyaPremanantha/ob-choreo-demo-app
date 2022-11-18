@@ -1,102 +1,20 @@
-.HomeContainer {
-    padding: 10px;
-    margin: 10px;
-    background-color: rgb(204, 218, 222);
-}
-
-.Header{
-    background-color: rgba(8, 18, 71, 1);
-    color: white;
-    position: relative;
-    height: 5.5rem;
+.nav-bar-custom {
+    --bs-bg-opacity: 1;
+    background-color: #465867 !important;
 }
 
 .Footer {
-    background-color: rgba(8, 18, 71, 1);
+    background-color: #465867;
     color: white;
-    position: absolute;
+    position: relative;
     left: 0;
     bottom: 0;
     right: 0;
-    height: 5.5rem;
+    height: 4rem;
     display: flex;
-}
-
-.footerCol {
-    margin: auto;
-}
-
-.footerText {
-    justify-content: center;
     text-align: center;
 }
 
-.AppHeader {
-    font-size: 30px;
-}
-
-.TppLogo {
-    height: 3rem;
-    text-align: center;
-    margin: 15px;
-    width: 4rem;
-}
-
-.Icons {
-    height: 3rem;
-    text-align: center;
-    margin: 15px;
-}
-
-.HeaderCol {
-    flex: 1;
-    justify-content: center;
-    text-align: center;
-}
-
-.LogoRow {
-    flex-wrap: inherit;
-}
-
-.TransferButton {
-    background-color: darkblue;
-    color: aliceblue;
-}
-
-.TextAlignLeft {
-    text-align: left;
-}
-
-.TextAlignRight {
-    text-align: right;
-}
-
-.SliderContainer {
-    padding: 10px;
-    margin: 10px;
-    background-color: rgb(147, 224, 245);
-}
-
-.MainAccContainer {
-    padding: 10px;
-    margin: 10px;
-    background-color: antiquewhite;
-}
-
-.AccountDetail {
-    border-radius: 0;
-    display: inline-block;
-    width: 1px;
-    height: 1px;
-    /*box-shadow:*/
-}
-
-.AccountDetailDiv {
-    margin: 10px;
-    background-color: gray;
-    border-radius: 8px;
-}
-
-.AccountDetailRow {
-    margin: 10px;
+. font-theme-light {
+    color: #d7e2de !important;
 }
