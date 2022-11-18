@@ -4,11 +4,14 @@ import {Accounts} from "./components/Accounts/Account";
 import {Offers} from "./components/Offers/Offers";
 import {Investments} from "./components/Investments/Investments";
 import {Footer} from "./components/common/Footer";
+import {LoginPage} from "./components/Login/LoginPage.jsx";
 
 function App() {
   let Component
   switch (window.location.pathname) {
-    case "/Home":
+    case "/login":
+      Component = LoginPage
+      break
     case "/":
       Component = LandingPage
       break
