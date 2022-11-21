@@ -1,20 +1,30 @@
 .nav-bar-custom {
     --bs-bg-opacity: 1;
-    background-color: #465867 !important;
+    background-color: var(--primary) !important;
 }
 
 .Footer {
-    background-color: #465867;
-    color: white;
+    background-color: var(--primary) !important;
+    color: var(--enabled);
     position: relative;
-    left: 0;
-    bottom: 0;
-    right: 0;
     height: 4rem;
     display: flex;
     text-align: center;
 }
 
-. font-theme-light {
-    color: #d7e2de !important;
+.font-theme-light {
+    color: var(--enabled) !important;
+}
+
+#section-right .nav-link {
+    color: var(--enabled) !important;
+}
+
+#section-left .nav-link {
+    color: var(--enabled) !important;
+    font-size: 18px;
+}
+
+#section-left .nav-link.active {
+    color: var(--secondary) !important;
 }
