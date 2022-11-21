@@ -1,14 +1,26 @@
-import { Navbar } from "./components/common/Navbar";
-import {LandingPage} from "./components/LandingPage/LandingPage";
-import {Footer} from "./components/common/Footer";
+import { Routes, Route } from "react-router-dom"
+import { LandingPage } from "./components/LandingPage/LandingPage";
+import { Callback } from "./services/oauth2-service";
+import { Toast } from "bootstrap";
+import { useEffect } from "react";
+import { Banks } from './components/BankPage'
 
 function App() {
 
+  useEffect (() => {
+    // initialize bootstrap toasts
+    const toastElList = document.querySelectorAll('.toast');
+    const toastList = [...toastElList].map(toastEl => new Toast(toastEl));
+    toastList.map(toast => toast.show());
+  });
+
   return (
     <div className="App" style={{background:'#d7e2de'}}>
-      <Navbar username={"user 1"}></Navbar>
-      <LandingPage />
-      <Footer />
+      <Routes>
+        <Route path="/" element={ <LandingPage/> } />
+        <Route path="/banks" element={ <Banks/> } />
+        <Route path="/oauth2/callback" element={ <Callback/> } />
+      </Routes>
     </div>
   );
 }
