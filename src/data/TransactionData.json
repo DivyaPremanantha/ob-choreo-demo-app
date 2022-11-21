@@ -2,7 +2,7 @@
     {
         "AccountId": "30080012343456",
         "TransactionId": "123",
-        "TransactionReference": "Ref 1",
+        "TransactionReference": "Netflix Subscription",
         "Amount": {
             "Amount": "10.00",
             "Currency": "$"
@@ -32,7 +32,7 @@
     {
         "AccountId": "30080098763459",
         "TransactionId": "124",
-        "TransactionReference": "Ref 2",
+        "TransactionReference": "Project fee",
         "Amount": {
             "Amount": "100.00",
             "Currency": "$"
@@ -62,7 +62,7 @@
     {
         "AccountId": "30080098971337",
         "TransactionId": "125",
-        "TransactionReference": "Ref 3",
+        "TransactionReference": "Apple Subscription",
         "Amount": {
             "Amount": "46.00",
             "Currency": "$"
@@ -92,7 +92,7 @@
     {
         "AccountId": "650-000 N1232",
         "TransactionId": "126",
-        "TransactionReference": "Ref 4",
+        "TransactionReference": "Monthly Rental",
         "Amount": {
             "Amount": "83.00",
             "Currency": "$"
