@@ -6,10 +6,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { ListGroup } from "react-bootstrap";
 import { useState, useEffect } from 'react';
+import { CONSTANTS } from '../../../services/utils';
 
 var transactionInfo
-var daily = '$123.67'
-var weekly = '$423.83'
+var daily = '$123.40'
+var weekly = '$423.20'
 var monthly = '$1237.01'
 var accessToken = sessionStorage.getItem(CONSTANTS.user_access_token)
 
@@ -61,7 +62,7 @@ export const ExpenseView = () => {
       )
   }, [])
 
-  if (transactionInfo || props.accessToken == '') {
+  if (transactionInfo || accessToken == null) {
     return (
       <Container className="transaction-list-container">
         <h5>All Expenses</h5>
