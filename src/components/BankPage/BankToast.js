@@ -1,29 +1,15 @@
-import { useEffect, useState } from "react";
-import { CONSTANTS } from "../../services/utils";
+import { Alert } from "bootstrap"
 
-export const BankToast = () => {
-    
-    const [toast, setToast] = useState(null);
+export const BankToast = ({error}) => {
 
-    useEffect (() => {
-        const redirect_response = sessionStorage.getItem(CONSTANTS.redirect_response);
-        if (redirect_response) {
-            setToast(JSON.parse(redirect_response));
-            sessionStorage.removeItem(CONSTANTS.redirect_response);
-        };
-    });
+    const alertList = document.querySelectorAll('.alert')
+    const alerts = [...alertList].map(element => new Alert(element))
+    alerts.map(alert => alert.close());
 
-    return ( toast &&
-        <div aria-live="polite" aria-atomic="true" className="position-relative">
-            <div className="toast-container bottom-0 end-0 p-3">
-                <div className="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div className="toast-header">
-                        <strong className="me-auto">{toast.message}</strong>
-                        <button type="button" className="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                    <div className="toast-body">{toast.description}</div>
-                </div>
-            </div>
+    return (
+        <div class="alert alert-warning alert-dismissible fade show" role="alert" style={{width: "32%", float: "right"}}>
+            <strong>{error.message}</strong> {" "}{error.description}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     )
 }
