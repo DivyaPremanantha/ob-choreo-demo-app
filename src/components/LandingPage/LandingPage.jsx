@@ -7,9 +7,9 @@ import {AccountListView} from "./AccountList/AccountListView";
 import {TransactionListView} from "./TransactionList/TransactionListView"
 import {ExpenseView} from "./ExpenseView/ExpenseView"
 import Container from "react-bootstrap/Col";
+import { useState}  from 'react';
 
 export const LandingPage = () => {
-
   return(
     <Container style={{display:'grid'}}>
       <div className = "home-container">
@@ -27,7 +27,7 @@ export const LandingPage = () => {
             <TransactionListView />
           </div>
           <div className='float-child'>
-            <ExpenseView />
+            <ExpenseView accessToken = ''/>
           </div>
         </div>
       </div>
