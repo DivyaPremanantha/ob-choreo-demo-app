@@ -11,7 +11,6 @@ import { Navbar } from '../common/Navbar';
 import { Footer } from '../common/Footer';
 
 export const LandingPage = () => {
-
   return(
     <Container style={{display:'grid'}}>
       <Navbar selectedTabName="Overview" />
@@ -30,7 +29,7 @@ export const LandingPage = () => {
             <TransactionListView />
           </div>
           <div className='float-child'>
-            <ExpenseView />
+            <ExpenseView/>
           </div>
         </div>
       </div>
