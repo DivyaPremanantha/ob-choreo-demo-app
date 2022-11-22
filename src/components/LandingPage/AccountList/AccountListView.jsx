@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../../../css/LandingPage.css'
 import Container from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -37,12 +37,12 @@ const accountDataConstant = AccountData.map((data,id)=>{
       <div className="account-list-view">
         <Row className="account-detail-view">
           <Col xs={10} className="no-padding-element text-align-left">
-            <h6 className="font-size-small font-color-orange">{data.display_name}</h6>
-            <div className="font-size-small font-color-dark">{data.account_id}</div>
+            <h6 className="font-size-small font-color-orange">{data.DisplayName}</h6>
+            <div className="font-size-small font-color-dark">{data.AccountId}</div>
           </Col>
           <Col className="no-padding-element text-align-right"><i className="bi bi-bank font-color-dark"></i></Col>
         </Row>
-        <div className="account-detail-view font-color-dark">{data.balance}</div>
+        <div className="account-detail-view font-color-dark">{data.Balance}</div>
       </div>
     </Col>
   )

@@ -49,7 +49,7 @@ const loadTransactionsView = (transactions) => {
     const date = transaction.ValueDateTime.split("T")[0];
     return (
       <Accordion.Item eventKey={id} key={id}>
-        <Accordion.Header>
+        <Accordion.Header className="transaction-list">
           <Col className="font-size-small font-color-dark">{date}</Col>
           <Col className="font-size-small font-color-orange">{transaction.TransactionReference}</Col>
           <Col className="font-size-small font-color-dark">{transaction.CreditDebitIndicator}</Col>
