@@ -27,7 +27,7 @@ export const LandingPage = () => {
             <TransactionListView />
           </div>
           <div className='float-child'>
-            <ExpenseView accessToken = ''/>
+            <ExpenseView/>
           </div>
         </div>
       </div>
