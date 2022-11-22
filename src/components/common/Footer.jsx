@@ -5,8 +5,8 @@ import Container from 'react-bootstrap/Col'
 export const Footer = () => {
 
   return(
-    <Container className = "Footer">
-      <p className="mt-4">WSO2 Open Banking | Copyright © WSO2 LLC. 2022</p>
+    <Container className = "Footer m-2">
+      <p className="p-3">WSO2 Open Banking | Copyright © WSO2 LLC. 2022</p>
     </Container>
   )
 }

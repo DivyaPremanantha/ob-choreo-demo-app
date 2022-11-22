@@ -1,11 +1,9 @@
-import { Navbar } from "./components/common/Navbar";
-import {LandingPage} from "./components/LandingPage/LandingPage";
-import {LoginPage} from "./components/Login/LoginPage";
-import {LoginAsgardeo} from "./components/Login/LoginAsgardeo";
-
-import {Footer} from "./components/common/Footer";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { AuthProvider } from "@asgardeo/auth-react";
+import { Routes, Route } from "react-router-dom"
+import { LandingPage } from "./components/LandingPage/LandingPage";
+import { Callback } from "./services/oauth2-service";
+import { Toast } from "bootstrap";
+import { useEffect } from "react";
+import { Banks } from './components/BankPage'
 
 const config = {
      signInRedirectURL: "http://localhost:3000/dashboard",
@@ -15,32 +13,21 @@ const config = {
      scope: [ "profile" ]
 };
 function App() {
-  /*let Component
-  switch (window.location.pathname) {
-    case "/login":
-      Component = LoginPage
-      break
-    case "/":
-      Component = LandingPage
-      break
-  }*/
 
+  useEffect (() => {
+    // initialize bootstrap toasts
+    const toastElList = document.querySelectorAll('.toast');
+    const toastList = [...toastElList].map(toastEl => new Toast(toastEl));
+    toastList.map(toast => toast.show());
+  });
 
   return (
     <div className="App" style={{background:'#d7e2de'}}>
-      <Navbar username={"user 1"}></Navbar>
-         <BrowserRouter>
-              <Routes>
-                <Route path="login" element={<LoginAsgardeo />} />
-                <Route path="dashboard/" element={<LandingPage />} />
-                <AuthProvider config={ config }>
-                            <Route path="/" element={<LoginAsgardeo />} />
-                </AuthProvider>
-
-
-              </Routes>
-         </BrowserRouter>
-      <Footer />
+      <Routes>
+        <Route path="/" element={ <LandingPage/> } />
+        <Route path="/banks" element={ <Banks/> } />
+        <Route path="/oauth2/callback" element={ <Callback/> } />
+      </Routes>
     </div>
   );
 }
