@@ -11,8 +11,9 @@ var transactionInfo
 var daily = '$123.67'
 var weekly = '$423.83'
 var monthly = '$1237.01'
+var accessToken = sessionStorage.getItem(CONSTANTS.user_access_token)
 
-export const ExpenseView = (props) => {
+export const ExpenseView = () => {
   const [response, setResponse] = useState([]);
   const colorScheme = [
     '#ffc808',
@@ -26,14 +27,14 @@ export const ExpenseView = (props) => {
   useEffect(() => {
     fetch("https://c112eada-316e-46a7-9705-df75e4a30edc-prod.e1-us-east-azure.choreoapis.dev/azyh/openbankingapi/1.0.0/transactions?backendServiceClientID=AtyObUX7_MyCLy6rHiGyny6Hqc0a&backendServiceClientSecret=77_F_mg63Lge9O8ujWptWui8X18a", {
       headers: {
-        'Authorization': 'Bearer ' + props.accessToken
+        'Authorization': 'Bearer ' + accessToken
       }
     })
       .then(res => res.json())
       .then(
         (data) => {
           setResponse(data)
-          if (props.accessToken) {
+          if (accessToken) {
             transactionInfo = data.Data
             daily = '$154.67'
             weekly = '$561.83'
