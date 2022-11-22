@@ -6,7 +6,7 @@
 .Footer {
     background-color: var(--primary) !important;
     color: var(--enabled);
-    position: fixed;
+    position: relative;
     height: 4rem;
     display: flex;
     text-align: center;
