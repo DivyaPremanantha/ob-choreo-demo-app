@@ -72,6 +72,7 @@
     margin: 7px;
     width: 110px;
     font-size: 10px;
+    height: auto;
 }
 
 .btn-grey {
@@ -129,6 +130,7 @@
 .new-bank-button {
     color: #ffffff;
     width: 130px;
+    height: auto;
     font-size: 13px;
     margin: auto;
     background-color: transparent;
@@ -186,6 +188,10 @@
     margin: 7px;
     width: 110px;
     font-size: 10px;
+}
+
+.transaction-list {
+    height: 50px;
 }
 
 
