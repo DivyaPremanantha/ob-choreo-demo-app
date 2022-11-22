@@ -13,4 +13,8 @@ export const CONFIG = {
     ASGARDEO_APP_CONSUMER_SECRET: window.env.ASGARDEO_APP_CONSUMER_SECRET,
     ASGARDEO_REDIRECT_URL: window.env.ASGARDEO_REDIRECT_URL,
     CHOREO_URL_TRANSACTIONS_API: window.env.CHOREO_API_HOST + "/openbankingapi/1.0.0/transactions",
+    SIGN_IN_REDIRECT_URL: "http://localhost:3000/dashboard",
+    CLIENTID: "6TgsdFvzGEwf86p_L9qjnQdXshYa",
+    BASE_URL: "https://api.asgardeo.io/t/sachinisiriwardene",
+    SCOPE: [ "profile" ]
 };

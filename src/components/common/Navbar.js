@@ -13,7 +13,7 @@ export const Navbar = ({ selectedTabName }) => {
         <div id="section-left" className="collapse navbar-collapse">
           <ul className="navbar-nav fs-5">
             <li className="nav-item">
-              <a className={"nav-link" + isActiveTab("Overview", selectedTabName)} aria-current="page" href="/">
+              <a className={"nav-link" + isActiveTab("Overview", selectedTabName)} aria-current="page" href="/dashboard">
                 Overview
               </a>
             </li>

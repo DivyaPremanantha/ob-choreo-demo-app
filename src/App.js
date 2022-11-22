@@ -4,28 +4,15 @@ import { Callback } from "./services/oauth2-service";
 import { Toast } from "bootstrap";
 import { useEffect } from "react";
 import { Banks } from './components/BankPage'
+import { Login } from './components/Login/Login'
 
-const config = {
-     signInRedirectURL: "http://localhost:3000/dashboard",
-     signOutRedirectURL: "https://localhost:3000/login",
-     clientID: "6TgsdFvzGEwf86p_L9qjnQdXshYa",
-     baseUrl: "https://api.asgardeo.io/t/sachinisiriwardene",
-     scope: [ "profile" ]
-};
 function App() {
-
-  useEffect (() => {
-    // initialize bootstrap toasts
-    const toastElList = document.querySelectorAll('.toast');
-    const toastList = [...toastElList].map(toastEl => new Toast(toastEl));
-    toastList.map(toast => toast.show());
-  });
-
-  return (
+ return (
     <div className="App" style={{background:'#d7e2de'}}>
       <Routes>
-        <Route path="/" element={ <LandingPage/> } />
-        <Route path="/banks" element={ <Banks/> } />
+        <Route path="/" element={ <Login/> } />
+        <Route path="/dashboard" element={ <LandingPage/> } />
+         <Route path="/banks" element={ <Banks/> } />
         <Route path="/oauth2/callback" element={ <Callback/> } />
       </Routes>
     </div>
