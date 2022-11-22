@@ -7,11 +7,17 @@ import {AccountListView} from "./AccountList/AccountListView";
 import {TransactionListView} from "./TransactionList/TransactionListView"
 import {ExpenseView} from "./ExpenseView/ExpenseView"
 import Container from "react-bootstrap/Col";
+<<<<<<< HEAD
 import { useState}  from 'react';
+=======
+import { Navbar } from '../common/Navbar';
+import { Footer } from '../common/Footer';
+>>>>>>> 66ea1d2be4c0c814e0556bc0767801e0c9d90b4e
 
 export const LandingPage = () => {
   return(
     <Container style={{display:'grid'}}>
+      <Navbar selectedTabName="Overview" />
       <div className = "home-container">
         <div>
           <div className="float-child">
@@ -31,6 +37,7 @@ export const LandingPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </Container>
   )
 }
