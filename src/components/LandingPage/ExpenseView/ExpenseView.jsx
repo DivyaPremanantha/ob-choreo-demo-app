@@ -13,7 +13,7 @@ var monthly = '$1237.01'
 var user_access_token = sessionStorage.getItem(CONSTANTS.user_access_token)
 
 export const ExpenseView = () => {
-  const [response, setResponse] = useState([]);
+  const [response, setResponse] = useState();
 
   useEffect(() => {
     if (user_access_token && transactionInfo == null) {
@@ -55,22 +55,24 @@ export const ExpenseView = () => {
 }
 
 const loadTransactionsHeaderView = (transactionInfo) => {
-  return (
-    <div className="row">
-      <div className="col-4">
-        <div className="font-size-small font-color-orange">Daily</div>
-        <div className="font-size-small font-color-dark">{daily}</div>
+  if (transactionInfo || user_access_token == null) {
+    return (
+      <div className="row">
+        <div className="col-4">
+          <div className="font-size-small font-color-orange">Daily</div>
+          <div className="font-size-small font-color-dark">{daily}</div>
+        </div>
+        <div className="col-4">
+          <div className="font-size-small font-color-orange">Weekly</div>
+          <div className="font-size-small font-color-dark">{weekly}</div>
+        </div>
+        <div className="col-4">
+          <div className="font-size-small font-color-orange">Monthly</div>
+          <div className="font-size-small font-color-dark">{monthly}</div>
+        </div>
       </div>
-      <div className="col-4">
-        <div className="font-size-small font-color-orange">Weekly</div>
-        <div className="font-size-small font-color-dark">{weekly}</div>
-      </div>
-      <div className="col-4">
-        <div className="font-size-small font-color-orange">Monthly</div>
-        <div className="font-size-small font-color-dark">{monthly}</div>
-      </div>
-    </div>
-  )
+    )
+  }
 }
 
 const loadTransactionsView = (transactionInfo) => {
