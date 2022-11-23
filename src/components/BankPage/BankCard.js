@@ -33,7 +33,7 @@ export const BankCard = ({bank, setIsBankLoading, updateBankList}) => {
                 console.log("found an application access token");
             }
         } catch (error) {
-            console.log("error: ", error);
+            console.log("error: " + error.message);
             if (setIsBankLoading) setIsBankLoading(false);
             throwError(new Error("failed to generate app access token"));
         }
@@ -45,7 +45,7 @@ export const BankCard = ({bank, setIsBankLoading, updateBankList}) => {
             consent_id = consentResponse.data.Data.ConsentId;;
             console.log("generated new consent id: " + consent_id)
         } catch (error) {
-            console.log("error: ", error);
+            console.log("error: " + error.message);
             if (setIsBankLoading) setIsBankLoading(false);
             throwError(new Error("failed to generate consent ID"));
         }
@@ -57,7 +57,7 @@ export const BankCard = ({bank, setIsBankLoading, updateBankList}) => {
             console.log("redirecting to ", authorizeResponse.data);
             window.location.replace(authorizeResponse.data);
         } catch (error) {
-            console.log("error: ", error);
+            console.log("error: " + error.message);
             if (setIsBankLoading) setIsBankLoading(false);
             throwError(new Error("failed to generate authorization url"));
         }
