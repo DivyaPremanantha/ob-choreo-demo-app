@@ -2,18 +2,25 @@ import { generateAccountAccessConsent } from "../../services/account-service"
 import { getAuthorizationURL } from "../../services/oauth2-service"
 import { getAppAccessToken } from "../../services/token-service";
 import { CONSTANTS } from "../../services/utils";
+import { useState, useCallback } from "react";
 
 export const BankCard = ({bank, setIsBankLoading, updateBankList}) => {
+
+    // To catch async errors using ErrorBoundary
+    const useAsyncError = () => {
+        const [ , setError] = useState(null);
+        return useCallback(e => {setError(() => {throw e})}, [setError]);
+    };
+    const throwError = useAsyncError();
 
     const handleBankAdd = async (event, bankId) => {
         
         event.preventDefault();
         if (setIsBankLoading) setIsBankLoading(true);
         
+        // generate application access token
+        let app_access_token = sessionStorage.getItem(CONSTANTS.app_access_token);
         try {
-            
-            let app_access_token = sessionStorage.getItem(CONSTANTS.app_access_token);
-        
             if (!app_access_token) {
 
                 const tokenResponse = await getAppAccessToken();
@@ -25,20 +32,40 @@ export const BankCard = ({bank, setIsBankLoading, updateBankList}) => {
             } else {
                 console.log("found an application access token");
             }
+        } catch (error) {
+            console.log("error: " + error.message);
+            if (setIsBankLoading) setIsBankLoading(false);
+            throwError(new Error("failed to generate app access token"));
+        }
 
-            // generate consent id
+        // generate consent id
+        let consent_id;
+        try {
             const consentResponse = await generateAccountAccessConsent(app_access_token);
-            const consent_id = consentResponse.data.Data.ConsentId;;
+            consent_id = consentResponse.data.Data.ConsentId;;
             console.log("generated new consent id: " + consent_id)
-            updateBankList(bankId);
+        } catch (error) {
+            console.log("error: " + error.message);
+            if (setIsBankLoading) setIsBankLoading(false);
+            throwError(new Error("failed to generate consent ID"));
+        }
 
-            // generate authorization url
+        // generate authorization url
+        try {
             const authorizeResponse = await getAuthorizationURL(consent_id, app_access_token)
+            updateBankList(bankId);
             console.log("redirecting to ", authorizeResponse.data);
             window.location.replace(authorizeResponse.data);
         } catch (error) {
-            console.log(error);
+            console.log("error: " + error.message);
+            if (setIsBankLoading) setIsBankLoading(false);
+            throwError(new Error("failed to generate authorization url"));
         }
+    }
+
+    const handleBankDelete = (event, bankId) => {
+        event.preventDefault();
+        updateBankList(bankId);
     }
 
     /*
@@ -54,7 +81,9 @@ export const BankCard = ({bank, setIsBankLoading, updateBankList}) => {
                         <a href="#" className="social-link"><i className="bi bi-pencil"></i></a>
                     </li>
                     <li className="list-inline-item">
-                        <a href="#" className="social-link"><i className="bi bi-trash3"></i></a>
+                        <button type="button" className="social-link" onClick={e => handleBankDelete(e, bank.id)}>
+                        <i className="bi bi-trash3"></i>
+                    </button>
                     </li>
                 </>
             ):
