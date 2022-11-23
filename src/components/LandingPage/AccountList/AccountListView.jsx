@@ -42,10 +42,8 @@ export const AccountListView = () => {
         {loading && <SkeletonAccount />}
         <div className="col">
           <div className="account-list-button">
-            <div className="row">
-              <i className="bi bi-plus-square plus-icon" onClick={navigateToBankPage}></i>
-            </div>
-            <div className="row">
+            <div className="p-4 add-bank-div">
+              <i className="bi bi-plus-square plus-icon" onClick={navigateToBankPage}></i><br />
               <Button onClick={navigateToBankPage} className="new-bank-button">Add a new bank</Button>
             </div>
           </div>
