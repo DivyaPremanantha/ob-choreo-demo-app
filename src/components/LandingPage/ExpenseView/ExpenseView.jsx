@@ -58,22 +58,24 @@ export const ExpenseView = () => {
 }
 
 const loadTransactionsHeaderView = (transactionInfo) => {
-  return (
-    <Row>
-      <Col>
-        <div className="font-size-small font-color-orange">Daily</div>
-        <div className="font-size-small font-color-dark">{daily}</div>
-      </Col>
-      <Col>
-        <div className="font-size-small font-color-orange">Weekly</div>
-        <div className="font-size-small font-color-dark">{weekly}</div>
-      </Col>
-      <Col>
-        <div className="font-size-small font-color-orange">Monthly</div>
-        <div className="font-size-small font-color-dark">{monthly}</div>
-      </Col>
-    </Row>
-  )
+  if (transactionInfo || user_access_token == null) {
+    return (
+      <Row>
+        <Col>
+          <div className="font-size-small font-color-orange">Daily</div>
+          <div className="font-size-small font-color-dark">{daily}</div>
+        </Col>
+        <Col>
+          <div className="font-size-small font-color-orange">Weekly</div>
+          <div className="font-size-small font-color-dark">{weekly}</div>
+        </Col>
+        <Col>
+          <div className="font-size-small font-color-orange">Monthly</div>
+          <div className="font-size-small font-color-dark">{monthly}</div>
+        </Col>
+      </Row>
+    )
+  }
 }
 
 const loadTransactionsView = (transactionInfo) => {
