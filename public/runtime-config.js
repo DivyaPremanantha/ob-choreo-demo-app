@@ -13,6 +13,6 @@ window.env = {
 
     ASGARDEO_APP_CONSUMER_KEY: "fkzIBdn7WeInrcOPgOMZQt6fr2sa",
     ASGARDEO_APP_CONSUMER_SECRET: "apfbQ6oker4l0jCmTEOaRz523FAa",
-    ASGARDEO_REDIRECT_URL: "http://localhost:3000/oauth2/callback"
+    HOST_URL: "http://localhost:3000"
 };
   
