@@ -42,21 +42,18 @@ export const AccountListView = () => {
         {loading && <SkeletonAccount />}
         <div className="col">
           <div className="account-list-button">
-<<<<<<< HEAD
             <Row>
               <a className="plus-icon-link" href="/banks"> <i  href="/banks" className="bi bi-plus-square plus-icon" ></i> </a>
             </Row>
             <Row>
               <Button  href="/banks" className="new-bank-button">Add a new bank</Button>
             </Row>
-=======
             <div className="row">
               <i className="bi bi-plus-square plus-icon" onClick={navigateToBankPage}></i>
             </div>
             <div className="row">
               <Button onClick={navigateToBankPage} className="new-bank-button">Add a new bank</Button>
             </div>
->>>>>>> f35a79ce71bd19f3e0a35f0264ddd6650d6de9c5
           </div>
         </div>
       </div>
@@ -64,20 +61,6 @@ export const AccountListView = () => {
   )
 }
 
-<<<<<<< HEAD
-const accountDataConstant = AccountData.map((data,id)=>{
-  return (
-    <Col key={id}>
-      <div className="account-list-view">
-        <Row className="account-detail-view">
-          <Col xs={10} className="no-padding-element text-align-left">
-            <h6 className="font-size-small font-color-orange">{data.DisplayName}</h6>
-            <div className="font-size-small font-color-dark">{data.AccountId}</div>
-          </Col>
-          <Col className="no-padding-element text-align-right"><i className="bi bi-bank font-color-dark"></i></Col>
-        </Row>
-        <div className="account-detail-view font-color-dark">{data.Balance}</div>
-=======
 const loadAccountsView = (accounts) => {
   return accounts.map((data, id) => {
     return (
@@ -94,7 +77,6 @@ const loadAccountsView = (accounts) => {
           </div>
           <div className="account-detail-view font-color-dark">{data.Balance}</div>
         </div>
->>>>>>> f35a79ce71bd19f3e0a35f0264ddd6650d6de9c5
       </div>
     )
   })
