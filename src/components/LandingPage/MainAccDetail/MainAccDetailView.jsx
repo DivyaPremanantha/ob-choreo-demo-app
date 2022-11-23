@@ -24,23 +24,23 @@ export const MainAccDetailView = () => {
         <Col>
           <Row className="font-size-medium font-color-orange">Test Savings Account</Row>
           <Row className="font-size-small font-color-grey">4567 **** **** 1234</Row>
-          <Row>
-            <Button onClick={handleShow} variant="primary" className="btn-grey transfer-button">Transfer Money</Button>
-
-            <Offcanvas show={show} onHide={handleClose} placement='end' className="home-container">
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title>Fund Transfer</Offcanvas.Title>
-              </Offcanvas.Header>
-              <Offcanvas.Body>
-                <MoneyTransferForm />
-              </Offcanvas.Body>
-            </Offcanvas>
-          </Row>
         </Col>
         <Col>
           <Row className="font-size-medium font-color-orange">Available Funds</Row>
           <Row className="font-size-small font-color-dark">$123,456.78</Row>
         </Col>
+      </Row>
+      <Row>
+        <Button onClick={handleShow} variant="primary" className="btn-grey transfer-button">Transfer Money</Button>
+
+        <Offcanvas show={show} onHide={handleClose} placement='end' className="home-container">
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title>Fund Transfer</Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <MoneyTransferForm />
+          </Offcanvas.Body>
+        </Offcanvas>
       </Row>
     </Container>
   )

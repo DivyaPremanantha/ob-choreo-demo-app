@@ -2,6 +2,7 @@
     padding: 0.5rem;
     margin: 0.5rem;
     background-color: #d7e2de;
+    overflow: scroll;
 }
 
 .float-child {
@@ -14,6 +15,7 @@
     height: 8rem;
     border-radius: 15px;
     background-color: #ffffff;
+    overflow: scroll;
 }
 
 .slider-image {
@@ -27,6 +29,7 @@
     background-color: white;
     border-radius: 15px;
     height: 8rem;
+    overflow: scroll;
 }
 
 .transaction-list-container {
@@ -70,7 +73,7 @@
     background-color: #465867;
     border-color: #465867;
     color: #ffffff;
-    margin: 0.5rem;
+    margin: 0 0.75rem;
     width: 7rem;
     font-size: 0.6rem;
     height: auto;
@@ -107,7 +110,8 @@
     margin: 0.5rem;
     background-color: #ffffff;
     border-radius: 8px;
-    height: 5rem
+    height: 5rem;
+    overflow: scroll;
 }
 
 .account-list-button {
@@ -165,6 +169,7 @@
 .expense-list-view {
     border-color: transparent;
     text-align: left !important;
+    overflow: scroll;
 }
 
 .expense-list-icon {
