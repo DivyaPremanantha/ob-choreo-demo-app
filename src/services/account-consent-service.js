@@ -22,22 +22,3 @@ export const generateAccountAccessConsent = async (app_access_token) => {
     return await post(requestConfig);
 }
 
-export const getAccounts = async (user_access_token) => {
-
-    const requestConfig = {
-        method: "POST",
-        url: CONFIG.CHOREO_URL_ACCOUNTS_API,
-        headers: {
-            "Content-Type": "application/json",
-            "accept": "application/json",
-            "Authorization": "Bearer " + user_access_token
-        },
-        params: {
-            "consentServiceClientID": CONFIG.CHOREO_CONSENT_SERVICE_CONSUMER_KEY,
-            "consentServiceClientSecret": CONFIG.CHOREO_CONSENT_SERVICE_SECRET
-        },
-    };
-
-    return await post(requestConfig);
-}
-

@@ -4,7 +4,7 @@ import ExpenseData from "../../../data/ExpenseData.json";
 import { ListGroup } from "react-bootstrap";
 import { useState, useEffect } from 'react';
 import { CONSTANTS } from '../../../services/utils';
-import { getTransactions } from '../../../services/transaction-service';
+import { getTransactions } from '../../../services/account-transaction-service';
 
 var transactionInfo
 var daily = '$123.40'

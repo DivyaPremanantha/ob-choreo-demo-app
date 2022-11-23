@@ -3,7 +3,7 @@ import {Accordion, Card, Table} from "react-bootstrap";
 import TransactionData from "../../../data/TransactionData.json";
 import { SkeletonTransaction } from './SkeletonTransaction';
 import { useState, useEffect } from "react";
-import { getTransactions } from '../../../services/transaction-service';
+import { getTransactions } from '../../../services/account-transaction-service';
 import { CONSTANTS } from '../../../services/utils';
 
 export const TransactionListView = () => {

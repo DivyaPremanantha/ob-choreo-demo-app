@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import '../../../css/LandingPage.css'
 import AccountData from "../../../data/AccountData.json";
 import {Button} from "react-bootstrap";
-import {getAccounts} from "../../../services/account-service";
+import {getAccounts} from "../../../services/account-transaction-service";
 import {CONSTANTS} from "../../../services/utils";
 import { SkeletonAccount } from './SkeletonAccount';
 import {useNavigate} from "react-router-dom";
@@ -19,11 +19,14 @@ export const AccountListView = () => {
     const user_access_token = sessionStorage.getItem(CONSTANTS.user_access_token);
     if (user_access_token) {
       setLoading(true);
-      accounts.pop();
+      accounts.splice(0, 2);
 
       getAccounts(user_access_token).then(resp => {
+        console.log(resp)
         console.log("fetching accounts data")
-        accounts.push(resp.data.Data?.Account[0])
+        resp.data.Data.Account.map(account => {
+          accounts.push(account)
+        })
         setLoading(false);
       }).catch(err => console.log(err));
     }

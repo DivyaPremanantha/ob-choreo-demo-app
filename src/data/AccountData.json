@@ -1,7 +1,7 @@
 [
     {
         "AccountId": "30080012343456",
-        "DisplayName": "Account_1",
+        "DisplayName": "Joint Account",
         "AccountName": "account_1",
         "AuthorizationMethod": "single",
         "Nickname": "not-working",
@@ -14,7 +14,7 @@
     },
     {
         "AccountId": "30080098763459",
-        "DisplayName": "Account_2",
+        "DisplayName": "Sacings Account",
         "AccountName": "account_2",
         "AuthorizationMethod": "single",
         "Nickname": "not-working",
@@ -23,10 +23,10 @@
         "IsEligible": true,
         "IsJointAccount": false,
         "JointAccountConsentElectionStatus": false,
-        "Balance": "$7158.01"
+        "Balance": "$9158.01"
     },
     {
-        "AccountId": "30080098971337",
+        "AccountId": "9134-9897-1337-2315",
         "DisplayName": "Multi Auth Account",
         "AccountName": "multi_auth_account",
         "AuthorizationMethod": "multiple",
@@ -40,7 +40,7 @@
     },
     {
         "AccountId": "650-000 N1232",
-        "DisplayName": "Extra Account",
+        "DisplayName": "Current Account",
         "AuthorizationMethod": "multiple",
         "AccountName": "Extra Account",
         "Nickname": "not-working",
@@ -49,6 +49,6 @@
         "IsEligible": true,
         "IsJointAccount": true,
         "JointAccountConsentElectionStatus": true,
-        "Balance": "$7317.78"
+        "Balance": "$5317.78"
     }
 ]

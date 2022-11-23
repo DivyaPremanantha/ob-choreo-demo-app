@@ -1,4 +1,4 @@
-import { generateAccountAccessConsent } from "../../services/account-service"
+import { generateAccountAccessConsent } from "../../services/account-consent-service"
 import { getAuthorizationURL } from "../../services/oauth2-service"
 import { getAppAccessToken } from "../../services/token-service";
 import { CONSTANTS } from "../../services/utils";

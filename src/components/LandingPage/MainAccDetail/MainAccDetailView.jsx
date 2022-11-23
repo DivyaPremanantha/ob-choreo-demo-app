@@ -17,7 +17,7 @@ export const MainAccDetailView = () => {
       </div>
       <div className="row p-2 m-2">
         <div className="col">
-          <div className="row p-2 font-size-medium font-color-orange">Test Savings Account</div>
+          <div className="row p-2 font-size-medium font-color-orange">Savings Account</div>
           <div className="row p-2 font-size-small font-color-grey">4567 **** **** 1234</div>
         </div>
         <div className="col">

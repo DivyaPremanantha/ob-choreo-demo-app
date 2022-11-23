@@ -1,17 +1,17 @@
 [
     {
         "AccountId": "30080012343456",
-        "TransactionId": "123",
-        "TransactionReference": "Netflix Subscription",
+        "TransactionId": "32445",
+        "TransactionReference": "Bills",
         "Amount": {
             "Amount": "10.00",
-            "Currency": "$"
+            "Currency": "USD"
         },
         "CreditDebitIndicator": "Debit",
         "Status": "Booked",
-        "BookingDateTime": "2017-04-05T10:43:07+00:00",
-        "ValueDateTime": "2017-04-05T10:45:22+00:00",
-        "TransactionInformation": "Cash from Aubrey",
+        "BookingDateTime": "2022-10-05T10:43:07+00:00",
+        "ValueDateTime": "2022-10-05T10:43:07+00:00",
+        "TransactionInformation": "Paid Netflix Subscription",
         "BankTransactionCode": {
             "Code": "str",
             "SubCode": "str"
@@ -23,25 +23,25 @@
         "Balance": {
             "Amount": {
                 "Amount": "230.00",
-                "Currency": "$"
+                "Currency": "USD"
             },
-            "CreditDebitIndicator": "Credit",
+            "CreditDebitIndicator": "Debit",
             "Type": "InterimBooked"
         }
     },
     {
         "AccountId": "30080098763459",
-        "TransactionId": "124",
-        "TransactionReference": "Project fee",
+        "TransactionId": "20119",
+        "TransactionReference": "Education",
         "Amount": {
             "Amount": "100.00",
-            "Currency": "$"
+            "Currency": "USD"
         },
         "CreditDebitIndicator": "Credit",
         "Status": "Booked",
-        "BookingDateTime": "2017-04-05T10:43:07+00:00",
-        "ValueDateTime": "2012-07-16T10:45:22+00:00",
-        "TransactionInformation": "Cash from Aubrey",
+        "BookingDateTime": "2022-09-05T10:43:07+00:00",
+        "ValueDateTime": "2022-09-05T10:43:07+00:00",
+        "TransactionInformation": "Scholarship from the institute",
         "BankTransactionCode": {
             "Code": "str",
             "SubCode": "str"
@@ -53,7 +53,7 @@
         "Balance": {
             "Amount": {
                 "Amount": "230.00",
-                "Currency": "GBP"
+                "Currency": "USD"
             },
             "CreditDebitIndicator": "Credit",
             "Type": "InterimBooked"
@@ -61,17 +61,17 @@
     },
     {
         "AccountId": "30080098971337",
-        "TransactionId": "125",
-        "TransactionReference": "Apple Subscription",
+        "TransactionId": "10755",
+        "TransactionReference": "Health",
         "Amount": {
             "Amount": "46.00",
-            "Currency": "$"
+            "Currency": "USD"
         },
         "CreditDebitIndicator": "Debit",
         "Status": "Booked",
-        "BookingDateTime": "2017-04-05T10:43:07+00:00",
-        "ValueDateTime": "2018-12-11T10:45:22+00:00",
-        "TransactionInformation": "Cash from Aubrey",
+        "BookingDateTime": "2022-07-05T10:43:07+00:00",
+        "ValueDateTime": "2022-07-05T10:43:07+00:00",
+        "TransactionInformation": "Medical expence",
         "BankTransactionCode": {
             "Code": "str",
             "SubCode": "str"
@@ -83,25 +83,25 @@
         "Balance": {
             "Amount": {
                 "Amount": "230.00",
-                "Currency": "GBP"
+                "Currency": "USD"
             },
-            "CreditDebitIndicator": "Credit",
+            "CreditDebitIndicator": "Debit",
             "Type": "InterimBooked"
         }
     },
     {
         "AccountId": "650-000 N1232",
-        "TransactionId": "126",
-        "TransactionReference": "Monthly Rental",
+        "TransactionId": "26112",
+        "TransactionReference": "House Expense",
         "Amount": {
             "Amount": "83.00",
-            "Currency": "$"
+            "Currency": "USD"
         },
         "CreditDebitIndicator": "Debit",
         "Status": "Booked",
-        "BookingDateTime": "2017-04-05T10:43:07+00:00",
-        "ValueDateTime": "2019-02-05T10:45:22+00:00",
-        "TransactionInformation": "Cash from Aubrey",
+        "BookingDateTime": "2022-06-05T10:43:07+00:00",
+        "ValueDateTime": "2022-06-05T10:43:07+00:00",
+        "TransactionInformation": "Paid Monthly Rental",
         "BankTransactionCode": {
             "Code": "str",
             "SubCode": "str"
@@ -113,9 +113,9 @@
         "Balance": {
             "Amount": {
                 "Amount": "230.00",
-                "Currency": "GBP"
+                "Currency": "USD"
             },
-            "CreditDebitIndicator": "Credit",
+            "CreditDebitIndicator": "Debit",
             "Type": "InterimBooked"
         }
     }
