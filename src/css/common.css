@@ -1,6 +1,7 @@
 .nav-bar-custom {
     --bs-bg-opacity: 1;
     background-color: var(--primary) !important;
+    overflow: scroll;
 }
 
 .Footer {
