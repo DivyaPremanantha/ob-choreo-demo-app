@@ -1,8 +1,6 @@
 import React from 'react'
 import {Accordion, Card, Table} from "react-bootstrap";
-import Container from "react-bootstrap/Col";
 import TransactionData from "../../../data/TransactionData.json";
-import Col from "react-bootstrap/Col";
 import { SkeletonTransaction } from './SkeletonTransaction';
 import { useState, useEffect } from "react";
 import { getTransactions } from '../../../services/transaction-service';
@@ -31,7 +29,7 @@ export const TransactionListView = () => {
   const transactionDataConstant = loadTransactionsView(transactions);
 
   return (
-    <Container className = "transaction-list-container">
+    <div className = "transaction-list-container">
       <h5>Recent Transactions</h5>
       <Accordion>
         <Card className="transaction-list-card">
@@ -39,7 +37,7 @@ export const TransactionListView = () => {
           {loading && <SkeletonTransaction />}
         </Card>
       </Accordion>
-    </Container>
+    </div>
   );
 }
 
@@ -50,10 +48,10 @@ const loadTransactionsView = (transactions) => {
     return (
       <Accordion.Item eventKey={id} key={id}>
         <Accordion.Header className="transaction-list">
-          <Col className="font-size-small font-color-dark">{date}</Col>
-          <Col className="font-size-small font-color-orange">{transaction.TransactionReference}</Col>
-          <Col className="font-size-small font-color-dark">{transaction.CreditDebitIndicator}</Col>
-          <Col className="font-size-small font-color-orange">{transaction.Amount.Currency}{transaction.Amount.Amount}</Col>
+          <div className="col font-size-small font-color-dark">{date}</div>
+          <div className="col font-size-small font-color-orange">{transaction.TransactionReference}</div>
+          <div className="col font-size-small font-color-dark">{transaction.CreditDebitIndicator}</div>
+          <div className="col font-size-small font-color-orange">{transaction.Amount.Currency}{transaction.Amount.Amount}</div>
         </Accordion.Header>
         <Accordion.Body>
           <Table striped bordered hover>

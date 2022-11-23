@@ -1,7 +1,11 @@
 .home-container {
-    padding: 0.5rem;
-    margin: 0.5rem;
     background-color: #d7e2de;
+    overflow: scroll;
+    display: block;
+}
+
+.mb-lg {
+    margin-bottom: 5rem !important;
 }
 
 .float-child {
@@ -11,13 +15,14 @@
 
 .slider-container {
     margin: 0.5rem;
-    height: 8rem;
+    height: 15rem;
     border-radius: 15px;
     background-color: #ffffff;
+    overflow: scroll;
 }
 
 .slider-image {
-    height: 130px;
+    height: 15rem;
     border-radius: 15px;
 }
 
@@ -26,7 +31,8 @@
     margin: 0.5rem;
     background-color: white;
     border-radius: 15px;
-    height: 8rem;
+    height: 15rem;
+    overflow: scroll;
 }
 
 .transaction-list-container {
@@ -34,13 +40,10 @@
     margin: 0.5rem;
     background-color: white;
     border-radius: 15px;
-    height: 19rem;
+    height: 20rem;
     overflow: scroll;
 }
 
-.row-padding {
-    padding: 0.5rem;
-}
 
 .font-size-small {
     font-size: 0.75rem;
@@ -70,10 +73,10 @@
     background-color: #465867;
     border-color: #465867;
     color: #ffffff;
-    margin: 0.5rem;
+    margin: 0 0.75rem;
     width: 7rem;
     font-size: 0.6rem;
-    height: auto;
+    height: 2rem;
 }
 
 .btn-grey {
@@ -107,18 +110,20 @@
     margin: 0.5rem;
     background-color: #ffffff;
     border-radius: 8px;
-    height: 5rem
+    height: 8rem;
+    overflow: scroll;
 }
 
 .account-list-button {
     margin: 0.5rem;
     background-color: #465867;
     border-radius: 8px;
-    height: 5rem;
+    height: 8rem;
 }
 
 .account-detail-view {
     margin: 0.5rem;
+    height: 50%;
 }
 .plus-icon-link {
     text-align: center;
@@ -169,6 +174,7 @@
 .expense-list-view {
     border-color: transparent;
     text-align: left !important;
+    overflow: scroll;
 }
 
 .expense-list-icon {
@@ -196,8 +202,26 @@
 }
 
 .transaction-list {
-    height: 50px;
+    height: 4rem;
 }
+
+.money-transfer-form-inputs {
+    width: 300px;
+    height: 2rem;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    background-color: white;
+}
+
+.div-hs {
+    height: 10%;
+}
+
+.div-hl {
+    height: 40%;
+}
+
 
 
 

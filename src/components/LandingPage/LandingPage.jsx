@@ -1,30 +1,33 @@
 import React from 'react'
 import '../../css/LandingPage.css'
 import {SliderView} from "./Slider/SliderView";
-import Row from "react-bootstrap/Row";
 import {MainAccDetailView} from "./MainAccDetail/MainAccDetailView";
 import {AccountListView} from "./AccountList/AccountListView";
 import {TransactionListView} from "./TransactionList/TransactionListView"
 import {ExpenseView} from "./ExpenseView/ExpenseView"
-import Container from "react-bootstrap/Col";
 import { Navbar } from '../common/Navbar';
 import { Footer } from '../common/Footer';
 
 export const LandingPage = () => {
+
   return(
-    <Container style={{display:'grid'}}>
+    <>
       <Navbar selectedTabName="Overview" />
-      <div className = "home-container">
-        <div>
-          <div className="float-child">
+      <div className="container-md mt-4 mb-lg home-container">
+        <div style={{height:'20%'}}>
+          <div className="float-child p-2">
             <SliderView />
           </div>
-          <div className="float-child">
+          <div className="float-child p-2">
             <MainAccDetailView />
           </div>
         </div>
-        <Row><AccountListView /></Row>
-        <div>
+        <br />
+        <div style={{height:'20%'}}>
+          <AccountListView />
+        </div>
+        <br />
+        <div style={{height:'60%'}}>
           <div className='float-child'>
             <TransactionListView />
           </div>
@@ -34,6 +37,6 @@ export const LandingPage = () => {
         </div>
       </div>
       <Footer />
-    </Container>
+    </>
   )
 }
