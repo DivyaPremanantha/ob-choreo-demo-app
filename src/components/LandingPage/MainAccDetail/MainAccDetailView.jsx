@@ -1,8 +1,5 @@
 import React, {useState} from 'react';
 import '../../../css/LandingPage.css'
-import Container from "react-bootstrap/Col";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
 import {Button, Offcanvas} from "react-bootstrap";
 
 export const MainAccDetailView = () => {
@@ -13,31 +10,34 @@ export const MainAccDetailView = () => {
   const handleShow = () => setShow(true);
 
   return(
-    <Container className = "main-acc-container">
-      <Row className="row-padding">
-        <Col>
-          <Row className="font-size-small font-color-orange">Main Account</Row>
-          <Row className="font-size-medium font-color-dark">Test Savings Account</Row>
-          <Row className="font-size-small font-color-grey">4567 **** **** 1234</Row>
-          <Row>
-            <Button onClick={handleShow} variant="primary" className="btn-grey transfer-button">Transfer Money</Button>
+    <div className = "container-md main-acc-container">
+      <div className="row m-2 font-color-dark">
+        <div className="col-2"><i className="bi bi-bank font-color-dark p-2"></i></div>
+        <div className="col-10">Main Funding Account</div>
+      </div>
+      <div className="row p-2 m-2">
+        <div className="col">
+          <div className="row p-2 font-size-medium font-color-orange">Test Savings Account</div>
+          <div className="row p-2 font-size-small font-color-grey">4567 **** **** 1234</div>
+        </div>
+        <div className="col">
+          <div className="row p-2 font-size-medium font-color-orange">Available Funds</div>
+          <div className="row p-2 font-size-small font-color-dark">$123,456.78</div>
+        </div>
+      </div>
+      <div className="row m-2">
+        <Button onClick={handleShow} variant="primary" className="btn-grey transfer-button">Transfer Money</Button>
 
-            <Offcanvas show={show} onHide={handleClose} placement='end' className="home-container">
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title>Fund Transfer</Offcanvas.Title>
-              </Offcanvas.Header>
-              <Offcanvas.Body>
-                <MoneyTransferForm />
-              </Offcanvas.Body>
-            </Offcanvas>
-          </Row>
-        </Col>
-        <Col>
-          <Row className="font-size-small font-color-orange">Available Funds</Row>
-          <Row className="font-size-medium font-color-dark">$123,456.78</Row>
-        </Col>
-      </Row>
-    </Container>
+        <Offcanvas show={show} onHide={handleClose} placement='end' className="home-container">
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title>Fund Transfer</Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <MoneyTransferForm />
+          </Offcanvas.Body>
+        </Offcanvas>
+      </div>
+    </div>
   )
 }
 
@@ -46,44 +46,44 @@ export const MoneyTransferForm = () => {
     <div>
       <form className="money-transfer-form">
         <div className="money-transfer-form-fields font-size-small">
-          <Row>
+          <div className="row">
             <label className="font-color-orange"> Bank Name:</label>
-          </Row>
-          <Row>
-            <input type="text" name="name" />
-          </Row>
+          </div>
+          <div className="row">
+            <input type="text" name="name" className="money-transfer-form-inputs" />
+          </div>
         </div>
         <div className="money-transfer-form-fields font-size-small">
-          <Row>
+          <div className="row">
             <label className="font-color-orange"> Account Name:</label>
-          </Row>
-          <Row>
-            <input type="text" name="name" />
-          </Row>
+          </div>
+          <div className="row">
+            <input type="text" name="name"  className="money-transfer-form-inputs" />
+          </div>
         </div>
         <div className="money-transfer-form-fields font-size-small">
-          <Row>
+          <div className="row">
             <label className="font-color-orange"> Account Number:</label>
-          </Row>
-          <Row>
-            <input type="text" name="name" />
-          </Row>
+          </div>
+          <div className="row">
+            <input type="text" name="name"  className="money-transfer-form-inputs" />
+          </div>
         </div>
         <div className="money-transfer-form-fields font-size-small">
-          <Row>
+          <div className="row">
             <label className="font-color-orange"> Amount:</label>
-          </Row>
-          <Row>
-            <input type="text" name="name" />
-          </Row>
+          </div>
+          <div className="row">
+            <input type="text" name="name"  className="money-transfer-form-inputs" />
+          </div>
         </div>
         <div className="money-transfer-form-fields font-size-small">
-          <Row>
+          <div className="row">
             <label className="font-color-orange">Reference:</label>
-          </Row>
-          <Row>
-            <input type="text" name="name" />
-          </Row>
+          </div>
+          <div className="row">
+            <input type="text" name="name"  className="money-transfer-form-inputs" />
+          </div>
         </div>
         <div>
           <input type="submit" className="btn-grey submit-btn" value="Submit" />
