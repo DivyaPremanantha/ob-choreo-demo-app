@@ -15,20 +15,16 @@ export const AccountListView = () => {
         <Col>
           <div className="account-list-button">
             <Row>
-              <i className="bi bi-plus-square plus-icon" onClick={showAlert}></i>
+              <a className="plus-icon-link" href="/banks"> <i  href="/banks" className="bi bi-plus-square plus-icon" ></i> </a>
             </Row>
             <Row>
-              <Button onClick={showAlert} className="new-bank-button">Add a new bank</Button>
+              <Button  href="/banks" className="new-bank-button">Add a new bank</Button>
             </Row>
           </div>
         </Col>
       </Row>
     </Container>
   )
-}
-
-const showAlert = () => {
-    alert("Redirecting");
 }
 
 const accountDataConstant = AccountData.map((data,id)=>{
