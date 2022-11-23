@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import '../../../css/LandingPage.css'
-import Container from "react-bootstrap/Col";
 import {Button, Offcanvas} from "react-bootstrap";
 
 export const MainAccDetailView = () => {

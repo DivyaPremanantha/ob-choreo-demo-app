@@ -1,6 +1,5 @@
 import React from 'react'
 import {Accordion, Card, Table} from "react-bootstrap";
-import Container from "react-bootstrap/Col";
 import TransactionData from "../../../data/TransactionData.json";
 import { SkeletonTransaction } from './SkeletonTransaction';
 import { useState, useEffect } from "react";
@@ -30,7 +29,7 @@ export const TransactionListView = () => {
   const transactionDataConstant = loadTransactionsView(transactions);
 
   return (
-    <Container className = "transaction-list-container">
+    <div className = "transaction-list-container">
       <h5>Recent Transactions</h5>
       <Accordion>
         <Card className="transaction-list-card">
@@ -38,7 +37,7 @@ export const TransactionListView = () => {
           {loading && <SkeletonTransaction />}
         </Card>
       </Accordion>
-    </Container>
+    </div>
   );
 }
 

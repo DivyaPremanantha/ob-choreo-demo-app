@@ -1,7 +1,6 @@
 import React from 'react'
 import { PieChart, Pie, Cell } from 'recharts';
 import ExpenseData from "../../../data/ExpenseData.json";
-import Container from "react-bootstrap/Col";
 import { ListGroup } from "react-bootstrap";
 import { useState, useEffect } from 'react';
 import { CONSTANTS } from '../../../services/utils';
@@ -46,12 +45,12 @@ export const ExpenseView = () => {
   var transactionDataConstant = loadTransactionsView(transactionInfo);
 
   return (
-    <Container className="transaction-list-container">
+    <div className="transaction-list-container">
       <h5>All Expenses</h5>
       {transactionHeaderConstant}
       <div className="p-2 font-size-small font-color-orange">Last Month</div>
       {transactionDataConstant}
-    </Container>
+    </div>
   )
 }
 
