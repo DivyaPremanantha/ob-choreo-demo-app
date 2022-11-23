@@ -25,7 +25,7 @@
 
 #section-left .nav-link {
     color: var(--enabled) !important;
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 #section-left .nav-link.active {
