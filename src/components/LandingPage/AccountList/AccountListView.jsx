@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import '../../../css/LandingPage.css'
-import Container from "react-bootstrap/Col";
 import AccountData from "../../../data/AccountData.json";
 import {Button} from "react-bootstrap";
 import {getAccounts} from "../../../services/account-service";

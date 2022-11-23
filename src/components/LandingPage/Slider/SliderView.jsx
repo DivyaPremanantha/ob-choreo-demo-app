@@ -1,6 +1,5 @@
 import React from 'react'
 import '../../../css/LandingPage.css'
-import Container from "react-bootstrap/Col";
 import {Carousel} from "react-bootstrap";
 import Slider1 from "../../../images/Slider1.jpg"
 import Slider2 from "../../../images/Slider2.jpg"
