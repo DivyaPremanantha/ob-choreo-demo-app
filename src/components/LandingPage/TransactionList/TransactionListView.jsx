@@ -16,11 +16,12 @@ export const TransactionListView = () => {
     const user_access_token = sessionStorage.getItem(CONSTANTS.user_access_token);
     if (user_access_token) {
       setLoading(true);
-      transactions.pop();
+      transactions.splice(0, 4)
 
       getTransactions(user_access_token).then(resp => {
-        console.log("fetching transactions data")
-        transactions.push(resp.data.Data?.Transaction[0])
+        resp.data.Data.Transaction.map(transaction => {
+          transactions.push(transaction)
+        })
         setLoading(false);
       }).catch(err => console.log(err));
     }
@@ -51,7 +52,7 @@ const loadTransactionsView = (transactions) => {
           <div className="col font-size-small font-color-dark">{date}</div>
           <div className="col font-size-small font-color-orange">{transaction.TransactionReference}</div>
           <div className="col font-size-small font-color-dark">{transaction.CreditDebitIndicator}</div>
-          <div className="col font-size-small font-color-orange">{transaction.Amount.Currency}{transaction.Amount.Amount}</div>
+          <div className="col font-size-small font-color-orange">{transaction.Amount.Currency} {transaction.Amount.Amount}</div>
         </Accordion.Header>
         <Accordion.Body>
           <Table striped bordered hover>
