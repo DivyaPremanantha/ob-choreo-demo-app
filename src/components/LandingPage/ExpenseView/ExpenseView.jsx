@@ -2,8 +2,6 @@ import React from 'react'
 import { PieChart, Pie, Cell } from 'recharts';
 import ExpenseData from "../../../data/ExpenseData.json";
 import Container from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import { ListGroup } from "react-bootstrap";
 import { useState, useEffect } from 'react';
 import { CONSTANTS } from '../../../services/utils';
@@ -51,7 +49,7 @@ export const ExpenseView = () => {
     <Container className="transaction-list-container">
       <h5>All Expenses</h5>
       {transactionHeaderConstant}
-      <div className="row-padding font-size-small font-color-orange">Last Month</div>
+      <div className="p-2 font-size-small font-color-orange">Last Month</div>
       {transactionDataConstant}
     </Container>
   )
@@ -59,20 +57,20 @@ export const ExpenseView = () => {
 
 const loadTransactionsHeaderView = (transactionInfo) => {
   return (
-    <Row>
-      <Col>
+    <div className="row">
+      <div className="col-4">
         <div className="font-size-small font-color-orange">Daily</div>
         <div className="font-size-small font-color-dark">{daily}</div>
-      </Col>
-      <Col>
+      </div>
+      <div className="col-4">
         <div className="font-size-small font-color-orange">Weekly</div>
         <div className="font-size-small font-color-dark">{weekly}</div>
-      </Col>
-      <Col>
+      </div>
+      <div className="col-4">
         <div className="font-size-small font-color-orange">Monthly</div>
         <div className="font-size-small font-color-dark">{monthly}</div>
-      </Col>
-    </Row>
+      </div>
+    </div>
   )
 }
 
@@ -89,7 +87,7 @@ const loadTransactionsView = (transactionInfo) => {
   if (transactionInfo || user_access_token == null) {
     return (
       <div className="pie-chart-view">
-        <Col xs={8}>
+        <div className="col-8">
           <PieChart width={150} height={150}>
             <Pie data={ExpenseData} dataKey="amount" outerRadius={75}>
               {
@@ -97,8 +95,8 @@ const loadTransactionsView = (transactionInfo) => {
               }
             </Pie>
           </PieChart>
-        </Col>
-        <Col>
+        </div>
+        <div className="col-4">
           <ListGroup>
             {
               ExpenseData.map((entry, index) =>
@@ -111,7 +109,7 @@ const loadTransactionsView = (transactionInfo) => {
               )
             }
           </ListGroup>
-        </Col>
+        </div>
       </div>
     )
   }

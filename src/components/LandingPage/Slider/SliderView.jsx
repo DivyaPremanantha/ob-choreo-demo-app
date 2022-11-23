@@ -9,7 +9,7 @@ import Slider3 from "../../../images/Slider3.jpg"
 export const SliderView = () => {
 
   return(
-    <Container className = "slider-container">
+    <div className = "container-md p-0 slider-container">
       <Carousel>
         <Carousel.Item>
           <img
@@ -39,6 +39,6 @@ export const SliderView = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-    </Container>
+    </div>
   )
 }
