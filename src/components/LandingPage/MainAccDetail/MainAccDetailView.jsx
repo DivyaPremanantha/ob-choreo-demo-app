@@ -14,10 +14,15 @@ export const MainAccDetailView = () => {
 
   return(
     <Container className = "main-acc-container">
+      <Row>
+        <div className="font-color-dark">
+          <i className="bi bi-bank font-color-dark row-padding"></i>
+          Main Funding Account
+        </div>
+      </Row>
       <Row className="row-padding">
         <Col>
-          <Row className="font-size-small font-color-orange">Main Account</Row>
-          <Row className="font-size-medium font-color-dark">Test Savings Account</Row>
+          <Row className="font-size-medium font-color-orange">Test Savings Account</Row>
           <Row className="font-size-small font-color-grey">4567 **** **** 1234</Row>
           <Row>
             <Button onClick={handleShow} variant="primary" className="btn-grey transfer-button">Transfer Money</Button>
@@ -33,8 +38,8 @@ export const MainAccDetailView = () => {
           </Row>
         </Col>
         <Col>
-          <Row className="font-size-small font-color-orange">Available Funds</Row>
-          <Row className="font-size-medium font-color-dark">$123,456.78</Row>
+          <Row className="font-size-medium font-color-orange">Available Funds</Row>
+          <Row className="font-size-small font-color-dark">$123,456.78</Row>
         </Col>
       </Row>
     </Container>
