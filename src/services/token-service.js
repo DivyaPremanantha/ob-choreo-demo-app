@@ -4,7 +4,6 @@ import { post, get } from "./http-client";
 import qs from 'qs';
 
 export const getAppAccessToken = async () => {
-
     const requestConfig = {
         method: "POST",
         url: CONFIG.CHOREO_TOKEN_URL,
