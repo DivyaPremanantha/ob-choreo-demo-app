@@ -10,6 +10,7 @@ function App() {
     <div className="App" style={{background:'#d7e2de'}}>
       <Routes>
         <Route path="/" element={ <Login/> } />
+        <Route path="/login" element={ <Login/> } />
         <Route path="/dashboard" element={ <LandingPage/> } />
          <Route path="/banks" element={ <Banks/> } />
         <Route path="/oauth2/callback" element={ <Callback/> } />
