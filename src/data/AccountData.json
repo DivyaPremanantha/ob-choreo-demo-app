@@ -1,7 +1,7 @@
 [
     {
         "AccountId": "30080012343456",
-        "DisplayName": "Joint Account",
+        "DisplayName": "Joint Account - New Civil Bank",
         "AccountName": "account_1",
         "AuthorizationMethod": "single",
         "Nickname": "not-working",
@@ -14,7 +14,7 @@
     },
     {
         "AccountId": "30080098763459",
-        "DisplayName": "Sacings Account",
+        "DisplayName": "Sacings Account - Absolute Bank",
         "AccountName": "account_2",
         "AuthorizationMethod": "single",
         "Nickname": "not-working",
@@ -27,7 +27,7 @@
     },
     {
         "AccountId": "9134-9897-1337-2315",
-        "DisplayName": "Multi Auth Account",
+        "DisplayName": "Joint Account - Free Citizen Bank",
         "AccountName": "multi_auth_account",
         "AuthorizationMethod": "multiple",
         "Nickname": "not-working",
@@ -40,7 +40,7 @@
     },
     {
         "AccountId": "650-000 N1232",
-        "DisplayName": "Current Account",
+        "DisplayName": "Current Account - Royal Crown Trust",
         "AuthorizationMethod": "multiple",
         "AccountName": "Extra Account",
         "Nickname": "not-working",

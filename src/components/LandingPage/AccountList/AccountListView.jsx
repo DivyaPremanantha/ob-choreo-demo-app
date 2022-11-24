@@ -10,7 +10,7 @@ import {useNavigate} from "react-router-dom";
 export const AccountListView = () => {
 
   const navigate = useNavigate();
-
+  
   const [accounts, setAccounts] = useState(AccountData);
   const [loading, setLoading] = useState(false);
 
@@ -19,10 +19,8 @@ export const AccountListView = () => {
     const user_access_token = sessionStorage.getItem(CONSTANTS.user_access_token);
     if (user_access_token) {
       setLoading(true);
-      accounts.splice(0, 2);
 
       getAccounts(user_access_token).then(resp => {
-        console.log(resp)
         console.log("fetching accounts data")
         resp.data.Data.Account.map(account => {
           accounts.push(account)
