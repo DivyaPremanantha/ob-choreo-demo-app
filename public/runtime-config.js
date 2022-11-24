@@ -13,6 +13,6 @@ window.env = {
 
     ASGARDEO_APP_CONSUMER_KEY: "fkzIBdn7WeInrcOPgOMZQt6fr2sa",
     ASGARDEO_APP_CONSUMER_SECRET: "apfbQ6oker4l0jCmTEOaRz523FAa",
-    HOST_URL: "http://localhost:3000"
+    HOST_URL: "https://white-forest-06046de00.2.azurestaticapps.net",
 };
   
