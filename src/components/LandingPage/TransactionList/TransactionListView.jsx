@@ -9,7 +9,7 @@ import { CONSTANTS } from '../../../services/utils';
 export const TransactionListView = () => {
   
   const [transactions, setTransactions] = useState(TransactionData);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     // get user access token to session storage
