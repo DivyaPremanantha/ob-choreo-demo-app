@@ -16,7 +16,6 @@ export const TransactionListView = () => {
     const user_access_token = sessionStorage.getItem(CONSTANTS.user_access_token);
     if (user_access_token) {
       setLoading(true);
-      transactions.splice(0, 4)
 
       getTransactions(user_access_token).then(resp => {
         resp.data.Data.Transaction.map(transaction => {
@@ -27,6 +26,7 @@ export const TransactionListView = () => {
     }
   }, [transactions])
 
+  transactions.reverse()
   const transactionDataConstant = loadTransactionsView(transactions);
 
   return (
