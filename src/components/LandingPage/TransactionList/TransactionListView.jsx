@@ -9,7 +9,7 @@ import { CONSTANTS } from '../../../services/utils';
 export const TransactionListView = () => {
   
   const [transactions, setTransactions] = useState(TransactionData);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // get user access token to session storage
@@ -35,11 +35,17 @@ export const TransactionListView = () => {
       <Accordion>
         <Card className="transaction-list-card">
           {transactionDataConstant}
-          {loading && <SkeletonTransaction />}
+          {loading && loadTransactionsSkeletons(transactions)}
         </Card>
       </Accordion>
     </div>
   );
+}
+
+const loadTransactionsSkeletons = (transactions) => {
+  return transactions.map((transaction, index) => {
+    return <SkeletonTransaction key={index}/>
+  })
 }
 
 const loadTransactionsView = (transactions) => {
