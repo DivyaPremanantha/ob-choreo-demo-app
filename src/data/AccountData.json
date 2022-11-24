@@ -26,7 +26,7 @@
         "Balance": "$9158.01"
     },
     {
-        "AccountId": "9134-9897-1337-2315",
+        "AccountId": "9134-9897-133",
         "DisplayName": "Joint Account - Free Citizen Bank",
         "AccountName": "multi_auth_account",
         "AuthorizationMethod": "multiple",
@@ -40,7 +40,7 @@
     },
     {
         "AccountId": "650-000 N1232",
-        "DisplayName": "Current Account - Royal Crown Trust",
+        "DisplayName": "Current Account - New Civil Bank",
         "AuthorizationMethod": "multiple",
         "AccountName": "Extra Account",
         "Nickname": "not-working",
