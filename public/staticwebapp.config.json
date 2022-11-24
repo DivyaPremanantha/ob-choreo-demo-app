@@ -23,6 +23,7 @@
         "rewrite": "/index.html",
         "exclude": [
             "/*.{png,jpg,svg}",
+            "/*runtime-config.js",
             "/bank_logos/*.{png,jpg,svg}",
             "/static/media/*.{png,jpg,jpeg,gif,bmp}",   
             "/static/css/*"
