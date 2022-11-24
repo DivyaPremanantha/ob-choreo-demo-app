@@ -13,8 +13,8 @@ export const LandingPage = () => {
   return(
     <>
       <Navbar selectedTabName="Overview" />
-      <div className="container-md mt-4 mb-lg home-container">
-        <div style={{height:'20%'}}>
+      <div className="container-md home-container">
+        <div style={{height:'20%'}} >
           <div className="float-child p-2">
             <SliderView />
           </div>
@@ -22,12 +22,12 @@ export const LandingPage = () => {
             <MainAccDetailView />
           </div>
         </div>
-        <br />
+        
         <div style={{height:'20%'}}>
           <AccountListView />
         </div>
-        <br />
-        <div style={{height:'60%'}}>
+        
+        <div style={{height:'60%'}} className="mt-2" >
           <div className='float-child'>
             <TransactionListView />
           </div>

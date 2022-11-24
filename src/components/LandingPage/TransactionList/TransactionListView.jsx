@@ -35,11 +35,17 @@ export const TransactionListView = () => {
       <Accordion>
         <Card className="transaction-list-card">
           {transactionDataConstant}
-          {loading && <SkeletonTransaction />}
+          {loading && loadTransactionsSkeletons(transactions)}
         </Card>
       </Accordion>
     </div>
   );
+}
+
+const loadTransactionsSkeletons = (transactions) => {
+  return transactions.map((transaction, index) => {
+    return <SkeletonTransaction key={index}/>
+  })
 }
 
 const loadTransactionsView = (transactions) => {

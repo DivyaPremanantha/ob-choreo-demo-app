@@ -40,13 +40,11 @@ export const AccountListView = () => {
     <div className = "container-md home-container">
       <div className="row">
         {accountDataConstant}
-        {loading && <SkeletonAccount />}
+        {loading && loadAccountsSkeletons(accounts)}
         <div className="col">
           <div className="account-list-button">
-            <div className="row">
-              <i className="bi bi-plus-square plus-icon" onClick={navigateToBankPage}></i>
-            </div>
-            <div className="row">
+            <div className="p-4 add-bank-div">
+              <i className="bi bi-plus-square plus-icon" onClick={navigateToBankPage}></i><br />
               <Button onClick={navigateToBankPage} className="new-bank-button">Add a new bank</Button>
             </div>
           </div>
@@ -74,5 +72,11 @@ const loadAccountsView = (accounts) => {
         </div>
       </div>
     )
+  })
+}
+
+const loadAccountsSkeletons = (accounts) => {
+  return accounts.map((account, index) => {
+    return <SkeletonAccount key={index}/>
   })
 }
