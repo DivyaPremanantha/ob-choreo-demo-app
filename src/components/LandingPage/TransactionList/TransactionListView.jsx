@@ -45,9 +45,14 @@ const loadTransactionsView = (transactions) => {
 
   return transactions.map((transaction,id)=>{
     const date = transaction.ValueDateTime.split("T")[0];
+    const logoPath = '/bank_logos/' + transaction.ProprietaryBankTransactionCode.Issuer + '.svg';
     return (
       <Accordion.Item eventKey={id} key={id}>
         <Accordion.Header className="transaction-list">
+          <div className="col font-size-small font-color-dark">
+            <img src={logoPath} alt="" className="img-fluid rounded-circle img-thumbnail transaction-view-logo" />
+            {/*mb-3 img-thumbnail shadow-sm*/}
+          </div>
           <div className="col font-size-small font-color-dark">{date}</div>
           <div className="col font-size-small font-color-orange">{transaction.TransactionReference}</div>
           <div className="col font-size-small font-color-dark">{transaction.CreditDebitIndicator}</div>
