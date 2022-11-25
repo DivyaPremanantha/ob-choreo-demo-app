@@ -98,8 +98,8 @@ export const BankCard = ({bank, setIsBankLoading, updateBankList}) => {
 
     return (
         <div className="col-xl-3 col-sm-6 mb-5" id="bank-card">
-            <div className="bg-enabled rounded shadow-sm py-5 px-4" >
-                <img src={bank.logo} alt="" width="128" className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
+            <div className="bg-enabled rounded shadow-sm py-3 px-3" >
+                <img src={bank.logo} alt="" width="80" className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
                 <h5 className="mb-0">{bank.name}</h5>
                 <span className="small text-uppercase text-muted">{bank.country}</span>
                 <ul className="social mb-0 list-inline mt-3">

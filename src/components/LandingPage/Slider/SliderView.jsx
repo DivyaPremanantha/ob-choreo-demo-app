@@ -1,9 +1,9 @@
 import React from 'react'
 import '../../../css/LandingPage.css'
 import {Carousel} from "react-bootstrap";
-import Slider1 from "../../../images/Slider1.jpg"
-import Slider2 from "../../../images/Slider2.jpg"
-import Slider3 from "../../../images/Slider3.jpg"
+import Slider1 from "../../../images/SliderNew1.jpg"
+import Slider2 from "../../../images/sliderNew2.jpg"
+import Slider3 from "../../../images/SliderNew3.jpg"
 
 export const SliderView = () => {
 
@@ -38,6 +38,8 @@ export const SliderView = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      <a href="http://www.freepik.com">Designed by vectorjuice / Freepik</a>
+
     </div>
   )
 }
