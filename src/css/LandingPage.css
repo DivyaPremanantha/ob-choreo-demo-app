@@ -219,7 +219,12 @@
     width: 50%;
 }
 
-
+.pie-chart-box {
+    display: flex;
+    alignItems: center;
+    justifyContent: space-evenly;
+    flexWrap: wrap;
+}
 
 /*align-items:center*/
 
