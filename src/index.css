@@ -23,8 +23,8 @@ code {
 }
 
 #bank-card .social-link {
-  width: 48px;
-  height: 48px;
+  width: 35px;
+  height: 35px;
   border: 1px solid var(--dark);
   background-color: var(--enabled) !important;
   color: var(--dark);

@@ -47,12 +47,12 @@ export const Banks = () => {
         <>
             <Navbar selectedTabName="Banks" />
             <ErrorBoundary>
-                <div className="container-md mt-4">
+                <div className="container-md mt-5" >
                     <BankList title="Link my other bank" banks={newBanks} 
                         setIsBankLoading={setIsBankAdding} updateBankList={updateBankList} />
                 </div>
                 <br />
-                <div className="container-md">
+                <div className="container-md mt-4 mb-5">
                     <BankList title="Added banks" banks={addedBanks} isBankLoading={isBankAdding} 
                         updateBankList={updateBankList} />
                 </div>
