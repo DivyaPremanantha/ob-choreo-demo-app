@@ -38,8 +38,6 @@ export const SliderView = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-      {/*<a href="http://www.freepik.com">Designed by vectorjuice / Freepik</a>*/}
-
     </div>
   )
 }
