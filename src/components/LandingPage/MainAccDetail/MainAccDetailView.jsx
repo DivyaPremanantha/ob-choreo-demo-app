@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import '../../../css/LandingPage.css'
 import {Button, Offcanvas} from "react-bootstrap";
+import background from "../../../images/bg_funding_account.jpg";
 
 export const MainAccDetailView = () => {
 
@@ -10,21 +11,28 @@ export const MainAccDetailView = () => {
   const handleShow = () => setShow(true);
 
   return(
-    <div className = "container-md main-acc-container">
+    <div className = "container-md main-acc-container" style={{"backgroundImage": `url(${background})`}}>
+      
       <div className="row m-2 font-color-dark">
-        <div className="col-2"><i className="bi bi-bank font-color-dark p-2"></i></div>
         <div className="col-10">Main Funding Account</div>
       </div>
+
       <div className="row p-2 m-2">
-        <div className="col">
+        
+        <div className="col-3">
           <div className="row p-2 font-size-medium font-color-orange">Savings Account</div>
           <div className="row p-2 font-size-small font-color-grey">4567 **** **** 1234</div>
         </div>
-        <div className="col">
+
+        <div className="col-3">
           <div className="row p-2 font-size-medium font-color-orange">Available Funds</div>
           <div className="row p-2 font-size-small font-color-dark">$123,456.78</div>
         </div>
+
+        <div className="col-6"></div>
+
       </div>
+      
       <div className="row m-2">
         <Button onClick={handleShow} variant="primary" className="btn-grey transfer-button">Transfer Money</Button>
 
