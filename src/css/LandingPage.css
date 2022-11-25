@@ -32,8 +32,10 @@
     background-color: white;
     border-radius: 15px;
     height: 15rem;
-    overflow: scroll;
-}
+    background-position: +192px 26%; 
+    background-size: 128%;
+    background-repeat: no-repeat;
+  }
 
 .transaction-list-container {
     padding: 0.5rem;
@@ -212,6 +214,11 @@
 
 .add-bank-div {
     text-align: center;
+}
+
+.transaction-view-logo {
+    height: 50%;
+    width: 50%;
 }
 
 
