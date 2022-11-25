@@ -51,7 +51,6 @@ const loadTransactionsView = (transactions) => {
         <Accordion.Header className="transaction-list">
           <div className="col font-size-small font-color-dark">
             <img src={logoPath} alt="" className="img-fluid rounded-circle img-thumbnail transaction-view-logo" />
-            {/*mb-3 img-thumbnail shadow-sm*/}
           </div>
           <div className="col font-size-small font-color-dark">{date}</div>
           <div className="col font-size-small font-color-orange">{transaction.TransactionReference}</div>
