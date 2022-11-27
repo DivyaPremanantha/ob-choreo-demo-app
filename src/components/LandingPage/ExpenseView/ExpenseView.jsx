@@ -1,5 +1,5 @@
 import React from 'react'
-import { PieChart, Pie, Cell } from 'recharts';
+import { PieChart, Pie, Cell, Tooltip } from 'recharts';
 import ExpenseData from "../../../data/ExpenseData.json";
 import { ListGroup } from "react-bootstrap";
 import { useState, useEffect } from 'react';
@@ -75,6 +75,32 @@ const loadTransactionsHeaderView = (transactionInfo) => {
   }
 }
 
+const RADIAN = Math.PI / 180;
+const renderCustomizedLabel = ({
+                                 cx,
+                                 cy,
+                                 midAngle,
+                                 innerRadius,
+                                 outerRadius,
+                                 percent,
+                               }) => {
+  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+  const x = cx + radius * Math.cos(-midAngle * RADIAN);
+  const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+  return (
+    <text
+      x={x}
+      y={y}
+      fill="white"
+      textAnchor={x > cx ? 'start' : 'end'}
+      dominantBaseline="central"
+    >
+      {/*{`${(percent * 100).toFixed(0)}%`}*/}
+    </text>
+  );
+};
+
 const loadTransactionsView = (transactionInfo) => {
 
   const colorScheme = [
@@ -85,16 +111,18 @@ const loadTransactionsView = (transactionInfo) => {
     '#EEE10D',
     '#D9B991'
   ];
+
   if (transactionInfo || user_access_token == null) {
     return (
       <div className="pie-chart-view">
         <div className="col-8">
           <PieChart width={150} height={150}>
-            <Pie data={ExpenseData} dataKey="amount" outerRadius={75}>
+            <Pie className="pie-stroke-color"  data={ExpenseData} dataKey="amount" outerRadius={75} label={renderCustomizedLabel}>
               {
                 ExpenseData.map((entry, index) => <Cell key={index} fill={colorScheme[index % colorScheme.length]} />)
               }
             </Pie>
+            <Tooltip />
           </PieChart>
         </div>
         <div className="col-4">
