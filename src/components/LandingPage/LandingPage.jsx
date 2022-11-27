@@ -14,11 +14,11 @@ export const LandingPage = () => {
     <>
       <Navbar selectedTabName="Overview" />
       <div className="container-md home-container">
-        <div style={{height:'20%'}} >
-          <div className="float-child p-2">
+        <div style={{height:'20%'}}>
+          <div className="float-child" style={{width: "49%"}}>
             <SliderView />
           </div>
-          <div className="float-child p-2">
+          <div className="float-child ps-3" style={{width: "49%"}}>
             <MainAccDetailView />
           </div>
         </div>
@@ -27,11 +27,11 @@ export const LandingPage = () => {
           <AccountListView />
         </div>
         
-        <div style={{height:'60%'}} className="mt-2" >
-          <div className='float-child'>
+        <div style={{height:'60%'}}>
+          <div className='float-child' style={{width:'50%'}}>
             <TransactionListView />
           </div>
-          <div className='float-child'>
+          <div className='float-child' style={{width:'49%'}}>
             <ExpenseView/>
           </div>
         </div>

@@ -11,3 +11,23 @@ export const CONSTANTS = {
     new_banks: "NEW_BANKS",
     redirect_response: "REDIRECT_RESPONSE"
 }
+
+export const loadImage = (data) => {
+
+    const displayName = data?.DisplayName;
+    if (displayName.includes("New Civil Bank")) {
+      return "/bank_logos/NewCivilBank.svg";
+    } else if (displayName.includes("Absolute Bank")) {
+      return "/bank_logos/AbsoluteBank.svg";
+    } else if (displayName.includes("Free Citizen Bank")) {
+      return "/bank_logos/FreeCitizenBank.svg";
+    } else if (displayName.includes("Goldcorp Bank")) {
+      return "/bank_logos/GoldcorpBank.svg";
+    } else if (displayName.includes("Citizens First Bank")) {
+      return "/bank_logos/CitizensFirstBank.svg";
+    } else if (displayName.includes("Royal Crown Trust")) {
+      return "/bank_logos/RoyalCrownTrust.svg";
+    } else {
+      return "/favicon.svg";
+    }
+  }
