@@ -13,7 +13,7 @@ export const LandingPage = () => {
   return(
     <>
       <Navbar selectedTabName="Overview" />
-      <div className="container-md home-container">
+      <div className="container-md home-container mb-lg">
         <div style={{height:'20%'}}>
           <div className="float-child" style={{width: "49%"}}>
             <SliderView />
