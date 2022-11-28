@@ -6,6 +6,8 @@ import {getAccounts} from "../../../services/account-transaction-service";
 import {CONSTANTS} from "../../../services/utils";
 import { SkeletonAccount } from './SkeletonAccount';
 import {useNavigate} from "react-router-dom";
+import { ScrollMenu } from 'react-horizontal-scrolling-menu';
+import { AccountCard } from './AccountCard';
 
 export const AccountListView = () => {
 
@@ -30,53 +32,36 @@ export const AccountListView = () => {
     }
   }, [accounts])
 
-  const accountDataConstant = loadAccountsView(accounts);
-
   const navigateToBankPage = () => {
     navigate('/banks');
   }
 
   return(
-    <div className = "container-md home-container">
+    <div className = "container-md home-container p-0">
       <div className="row">
-        {accountDataConstant}
-        {loading && loadAccountsSkeletons(accounts)}
-        <div className="col">
-          <div className="account-list-button">
-            <div className="p-4 add-bank-div">
-              <i className="bi bi-plus-square plus-icon" onClick={navigateToBankPage}></i><br />
-              <Button onClick={navigateToBankPage} className="new-bank-button">Add a new bank</Button>
+        <ScrollMenu>
+          {accounts.map((account, id) => (<AccountCard itemId={id} key={id} account={account}/>))}
+          
+          {loading && loadAccountsSkeletons()}
+
+          <div className="col ps-2">
+            <div className="account-list-button" style={{paddingLeft: 0, marginLeft: 0, width: "228px"}}>
+              <div className="p-4 add-bank-div">
+                <i className="bi bi-plus-square plus-icon" onClick={navigateToBankPage}></i><br />
+                <Button onClick={navigateToBankPage} className="new-bank-button">Add a new bank</Button>
+              </div>
             </div>
           </div>
-        </div>
+        </ScrollMenu>
       </div>
     </div>
   )
 }
 
-const loadAccountsView = (accounts) => {
-  return accounts.map((data, id) => {
+const loadAccountsSkeletons = () => {
     return (
-      <div className="col" key={id}>
-        <div className="account-list-view">
-          <div className="account-detail-view">
-            <div className="col-10 no-padding-element text-align-left">
-              <h6 className="font-size-small font-color-orange">{data.DisplayName}</h6>
-              <div className="font-size-small font-color-dark">{data.AccountId}</div>
-            </div>
-            <div className="col-2 no-padding-element text-align-right">
-              <i className="bi bi-bank font-color-dark"></i>
-            </div>
-          </div>
-          <div className="account-detail-view font-color-dark">{data.Balance}</div>
-        </div>
+      <div style={{width: "228px"}}>
+        <SkeletonAccount />
       </div>
     )
-  })
-}
-
-const loadAccountsSkeletons = (accounts) => {
-  return accounts.map((account, index) => {
-    return <SkeletonAccount key={index}/>
-  })
 }

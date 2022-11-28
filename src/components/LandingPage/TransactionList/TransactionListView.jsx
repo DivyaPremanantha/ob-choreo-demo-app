@@ -16,7 +16,6 @@ export const TransactionListView = () => {
     const user_access_token = sessionStorage.getItem(CONSTANTS.user_access_token);
     if (user_access_token) {
       setLoading(true);
-      transactions.splice(0, 4)
 
       getTransactions(user_access_token).then(resp => {
         resp.data.Data.Transaction.map(transaction => {
@@ -27,6 +26,7 @@ export const TransactionListView = () => {
     }
   }, [transactions])
 
+  transactions.reverse()
   const transactionDataConstant = loadTransactionsView(transactions);
 
   return (
@@ -52,9 +52,13 @@ const loadTransactionsView = (transactions) => {
 
   return transactions.map((transaction,id)=>{
     const date = transaction.ValueDateTime.split("T")[0];
+    const logoPath = '/bank_logos/' + transaction.ProprietaryBankTransactionCode.Issuer + '.svg';
     return (
       <Accordion.Item eventKey={id} key={id}>
         <Accordion.Header className="transaction-list">
+          <div className="col font-size-small font-color-dark">
+            <img src={logoPath} alt="" className="img-fluid rounded-circle img-thumbnail transaction-view-logo" />
+          </div>
           <div className="col font-size-small font-color-dark">{date}</div>
           <div className="col font-size-small font-color-orange">{transaction.TransactionReference}</div>
           <div className="col font-size-small font-color-dark">{transaction.CreditDebitIndicator}</div>

@@ -3,21 +3,21 @@
         {
             "id": "1",
             "name": "New Civil Bank",
-            "logo": "bank_logos/1.svg",
+            "logo": "bank_logos/NewCivilBank.svg",
             "country": "Wales",
             "isAdded": true
         },
         {
             "id": "2",
             "name": "Absolute Bank",
-            "logo": "bank_logos/2.svg",
+            "logo": "bank_logos/AbsoluteBank.svg",
             "country": "Scotland",
             "isAdded": true
         },
         {
             "id": "3",
             "name": "Free Citizen Bank",
-            "logo": "bank_logos/3.svg",
+            "logo": "bank_logos/FreeCitizenBank.svg",
             "country": "England",
             "isAdded": true
         }
@@ -26,21 +26,21 @@
         {
             "id": "10",
             "name": "Goldcorp Bank",
-            "logo": "bank_logos/10.svg",
+            "logo": "bank_logos/GoldcorpBank.svg",
             "country": "England",
             "isAdded": false
         },
         {
             "id": "11",
             "name": "Citizens First Bank",
-            "logo": "bank_logos/11.svg",
+            "logo": "bank_logos/CitizensFirstBank.svg",
             "country": "Scotland",
             "isAdded": false
         },
         {
             "id": "12",
             "name": "Royal Crown Trust",
-            "logo": "bank_logos/12.svg",
+            "logo": "bank_logos/RoyalCrownTrust.svg",
             "country": "Wales",
             "isAdded": false
         }

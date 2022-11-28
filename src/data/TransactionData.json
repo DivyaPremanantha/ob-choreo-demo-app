@@ -2,7 +2,7 @@
     {
         "AccountId": "30080012343456",
         "TransactionId": "32445",
-        "TransactionReference": "Bills",
+        "TransactionReference": "Shopping",
         "Amount": {
             "Amount": "10.00",
             "Currency": "USD"
@@ -18,7 +18,7 @@
         },
         "ProprietaryBankTransactionCode": {
             "Code": "Transfer",
-            "Issuer": "AlphaBank"
+            "Issuer": "AbsoluteBank"
         },
         "Balance": {
             "Amount": {
@@ -48,7 +48,7 @@
         },
         "ProprietaryBankTransactionCode": {
             "Code": "Transfer",
-            "Issuer": "AlphaBank"
+            "Issuer": "CitizensFirstBank"
         },
         "Balance": {
             "Amount": {
@@ -62,7 +62,7 @@
     {
         "AccountId": "30080098971337",
         "TransactionId": "10755",
-        "TransactionReference": "Health",
+        "TransactionReference": "Transportation",
         "Amount": {
             "Amount": "46.00",
             "Currency": "USD"
@@ -78,7 +78,7 @@
         },
         "ProprietaryBankTransactionCode": {
             "Code": "Transfer",
-            "Issuer": "AlphaBank"
+            "Issuer": "FreeCitizenBank"
         },
         "Balance": {
             "Amount": {
@@ -92,7 +92,7 @@
     {
         "AccountId": "650-000 N1232",
         "TransactionId": "26112",
-        "TransactionReference": "House Expense",
+        "TransactionReference": "Mortgage",
         "Amount": {
             "Amount": "83.00",
             "Currency": "USD"
@@ -101,14 +101,14 @@
         "Status": "Booked",
         "BookingDateTime": "2022-06-05T10:43:07+00:00",
         "ValueDateTime": "2022-06-05T10:43:07+00:00",
-        "TransactionInformation": "Paid Monthly Rental",
+        "TransactionInformation": "Paid Monthly Mortgage",
         "BankTransactionCode": {
             "Code": "str",
             "SubCode": "str"
         },
         "ProprietaryBankTransactionCode": {
             "Code": "Transfer",
-            "Issuer": "AlphaBank"
+            "Issuer": "GoldcorpBank"
         },
         "Balance": {
             "Amount": {

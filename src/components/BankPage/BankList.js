@@ -13,7 +13,7 @@ export const BankList = ({title, banks, isBankLoading, setIsBankLoading, updateB
       <div className="container-md py-3" id="section-title">
         <h3>{title}</h3>
       </div>
-      <div className="row text-center mx-2" id="section-body">
+      <div className="row row-cols-3 text-center mx-2" id="section-body">
           {bankCards}
           {isBankLoading && <SkeletonBankCard />}
       </div>

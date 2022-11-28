@@ -1,9 +1,9 @@
 import '../../css/LoginNew.css'
 import applogo from "../../images/favicon.png";
-import Asgardeo from "../../images/Asgardeo.png";
+import Asgardeo from "../../images/Asgardeo.svg";
 import { useAuthContext } from "@asgardeo/auth-react";
-import fb from "../../images/fb-color.png";
-import google from "../../images/google-color.png";
+import fb from "../../images/facebook.svg";
+import google from "../../images/google.svg";
 
 export function  LoginAsgardeo() {
 const { state, signIn, signOut } = useAuthContext();

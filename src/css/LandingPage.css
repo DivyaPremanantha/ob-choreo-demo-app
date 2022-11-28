@@ -32,8 +32,10 @@
     background-color: white;
     border-radius: 15px;
     height: 15rem;
-    overflow: scroll;
-}
+    background-position: +192px 26%; 
+    background-size: 128%;
+    background-repeat: no-repeat;
+  }
 
 .transaction-list-container {
     padding: 0.5rem;
@@ -111,7 +113,6 @@
     background-color: #ffffff;
     border-radius: 8px;
     height: 8rem;
-    overflow: scroll;
 }
 
 .account-list-button {
@@ -214,7 +215,17 @@
     text-align: center;
 }
 
+.transaction-view-logo {
+    height: 40%;
+    width: 40%;
+}
 
+.pie-chart-box {
+    display: flex;
+    alignItems: center;
+    justifyContent: space-evenly;
+    flexWrap: wrap;
+}
 
 /*align-items:center*/
 
