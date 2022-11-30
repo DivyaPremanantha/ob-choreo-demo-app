@@ -124,6 +124,10 @@
     margin-left: 0;
 }
 
+.account-list-button:hover {
+    background-color: var(--primary);
+}
+
 .account-detail-view {
     margin: 0.5rem;
     height: 50%;
@@ -149,9 +153,9 @@
     overflow: hidden;
     outline: none;
     --bs-btn-hover-color: #ffffff;
-    --bs-btn-hover-bg:  #465867;
+    --bs-btn-hover-bg:  transparent;
     --bs-btn-active-color: #ffffff;
-    --bs-btn-active-bg: #465867;
+    --bs-btn-active-bg: transparent;
 }
 
 .no-padding-element {

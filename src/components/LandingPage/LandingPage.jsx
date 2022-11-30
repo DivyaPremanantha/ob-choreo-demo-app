@@ -13,17 +13,17 @@ export const LandingPage = () => {
   return(
     <>
       <Navbar selectedTabName="Overview" />
-      <div className="container-md home-container mb-lg">
+      <div className="container-md home-container">
         <div style={{height:'20%'}}>
-          <div className="float-child" style={{width: "49%"}}>
+          <div className="float-child mb-3" style={{width: "49%"}}>
             <SliderView />
           </div>
-          <div className="float-child ps-3" style={{width: "49%"}}>
+          <div className="float-child ps-3 mb-3" style={{width: "49%"}}>
             <MainAccDetailView />
           </div>
         </div>
-        
-        <div style={{height:'20%'}}>
+
+        <div className="mb-3" style={{height:'20%'}}>
           <AccountListView />
         </div>
         
