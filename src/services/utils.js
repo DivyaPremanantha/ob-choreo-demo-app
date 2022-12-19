@@ -33,9 +33,13 @@ export const loadImage = (data) => {
 }
 
 export const loadBankLogoByNickName = (bankNickName) => {
-  if (bankNickName.includes("Contoso")) {
-    return "/bank_logos/ContosoBank.jpg";
-  } else {
-    return "/bank_logos/ContosoBank.jpg";
+  if (bankNickName.includes("Contoso Retail")) {
+    return "/bank_logos/ContosoRetailBank.svg";
+  } else if (bankNickName.includes("Contoso SME")) {
+    return "/bank_logos/ContosoSMEBank.svg";
+  } else if (bankNickName.includes("Contoso Corporate")) {
+    return "/bank_logos/ContosoCorpBank.svg";
+  }  else {
+    return "/bank_logos/ContosoInvestment.svg";
   }
 }

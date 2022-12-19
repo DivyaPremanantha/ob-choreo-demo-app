@@ -17,7 +17,7 @@
         "DisplayName": "Savings Account - Absolute Bank",
         "AccountName": "account_2",
         "AuthorizationMethod": "single",
-        "Nickname": "Savings Account - Contoso SME Bank",
+        "Nickname": "Savings Account - Contoso Corporate",
         "CustomerAccountType": "Individual",
         "Type": "TRANS_AND_SAVINGS_ACCOUNTS",
         "IsEligible": true,
