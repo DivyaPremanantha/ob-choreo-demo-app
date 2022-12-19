@@ -53,3 +53,10 @@ code {
 .bg-secondary {
   background-color: var(--secondary) !important;
 }
+
+#contoso-logo {
+  width: 256;
+  height: 24;
+  font-weight: bolder;
+  color: var(--secondary);
+}

@@ -2,22 +2,22 @@
     "addedBanks": [
         {
             "id": "1",
-            "name": "New Civil Bank",
-            "logo": "bank_logos/NewCivilBank.svg",
+            "name": "Contoso Retail Bank",
+            "logo": "bank_logos/ContosoBank.jpg",
             "country": "Wales",
             "isAdded": true
         },
         {
             "id": "2",
-            "name": "Absolute Bank",
-            "logo": "bank_logos/AbsoluteBank.svg",
+            "name": "Contoso SME Bank",
+            "logo": "bank_logos/ContosoBank.jpg",
             "country": "Scotland",
             "isAdded": true
         },
         {
             "id": "3",
-            "name": "Free Citizen Bank",
-            "logo": "bank_logos/FreeCitizenBank.svg",
+            "name": "Contoso Corporate Bank",
+            "logo": "bank_logos/ContosoBank.jpg",
             "country": "England",
             "isAdded": true
         }
@@ -39,8 +39,8 @@
         },
         {
             "id": "12",
-            "name": "Royal Crown Trust",
-            "logo": "bank_logos/RoyalCrownTrust.svg",
+            "name": "Contoso Investment Bank",
+            "logo": "bank_logos/ContosoBank.jpg",
             "country": "Wales",
             "isAdded": false
         }

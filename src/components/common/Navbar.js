@@ -5,7 +5,9 @@ export const Navbar = ({ selectedTabName }) => {
     <nav className="navbar navbar-expand-sm nav-bar-custom m-2">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
-          <img src="logo.svg" alt="Logo" width="256" height="24" className="d-inline-block align-text-top"/> 
+          <span id="contoso-logo">
+            CONTOSO <img src="favicon.svg" alt="Logo" height="24" className="d-inline-block align-text-top"/> CENTRAL
+          </span>
           {" "}
         </a>
 

@@ -4,7 +4,7 @@ import TransactionData from "../../../data/TransactionData.json";
 import { SkeletonTransaction } from './SkeletonTransaction';
 import { useState, useEffect } from "react";
 import { getTransactions } from '../../../services/account-transaction-service';
-import { CONSTANTS } from '../../../services/utils';
+import { CONSTANTS, loadBankLogoByNickName } from '../../../services/utils';
 
 export const TransactionListView = () => {
   
@@ -52,7 +52,8 @@ const loadTransactionsView = (transactions) => {
 
   return transactions.map((transaction,id)=>{
     const date = transaction.ValueDateTime.split("T")[0];
-    const logoPath = '/bank_logos/' + transaction.ProprietaryBankTransactionCode.Issuer + '.svg';
+    const logoPath = loadBankLogoByNickName(transaction.ProprietaryBankTransactionCode.Code);
+
     return (
       <Accordion.Item eventKey={id} key={id}>
         <Accordion.Header className="transaction-list">

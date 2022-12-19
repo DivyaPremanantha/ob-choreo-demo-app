@@ -1,4 +1,4 @@
-import { loadImage } from "../../../services/utils"
+import { loadBankLogoByNickName } from "../../../services/utils"
 
 export const AccountCard = ({account}) => {
     return (
@@ -7,12 +7,12 @@ export const AccountCard = ({account}) => {
             <div className="account-detail-view">
                 
                 <div className="row">
-                <div className="col-2 no-padding-element m-1">
-                    <img className="img-fluid rounded-circle" src={loadImage(account)} alt="bank-logo" style={{height: "100%", width: "100%"}}/>
+                <div className="col-2 no-padding-element ms-2 mt-2">
+                    <img className="img-fluid rounded-circle" src={loadBankLogoByNickName(account.Nickname)} alt="bank-logo" />
                 </div>
                 
                 <div className="col-8 m-1 pt-2">
-                    <h6 className="font-size-small font-color-orange">{account.DisplayName}</h6>
+                    <h6 className="font-size-small font-color-orange">{account.Nickname}</h6>
                     <div className="font-size-small font-color-dark">{account.AccountId}</div>
                 </div>
 

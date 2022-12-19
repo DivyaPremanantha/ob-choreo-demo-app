@@ -17,7 +17,7 @@
             "SubCode": "str"
         },
         "ProprietaryBankTransactionCode": {
-            "Code": "Transfer",
+            "Code": "Contoso",
             "Issuer": "AbsoluteBank"
         },
         "Balance": {
@@ -47,7 +47,7 @@
             "SubCode": "str"
         },
         "ProprietaryBankTransactionCode": {
-            "Code": "Transfer",
+            "Code": "Contoso",
             "Issuer": "FreeCitizenBank"
         },
         "Balance": {
@@ -77,7 +77,7 @@
             "SubCode": "str"
         },
         "ProprietaryBankTransactionCode": {
-            "Code": "Transfer",
+            "Code": "Contoso",
             "Issuer": "AbsoluteBank"
         },
         "Balance": {
@@ -107,7 +107,7 @@
             "SubCode": "str"
         },
         "ProprietaryBankTransactionCode": {
-            "Code": "Transfer",
+            "Code": "Contoso",
             "Issuer": "NewCivilBank"
         },
         "Balance": {
