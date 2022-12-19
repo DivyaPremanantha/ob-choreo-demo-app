@@ -25,6 +25,13 @@ export const AccountListView = () => {
       getAccounts(user_access_token).then(resp => {
         console.log("fetching accounts data")
         resp.data.Data.Account.map(account => {
+          // todo: remove below if else block
+          if (account.AccountId === "30080012343456") {
+            account.Nickname = "Personal Account - Contoso Investment";
+          } else if (account.AccountId === "15687012313256") {
+            account.Nickname = "Joint Account - Contoso Investment";
+          }
+
           accounts.push(account)
         })
         setLoading(false);
