@@ -46,7 +46,6 @@ export const getAuthorizationURL = async (consent_id, app_access_token) => {
             "Authorization": "Bearer " + app_access_token
         },
         params: {
-            "client_id": CONFIG.ASGARDEO_APP_CONSUMER_KEY,
             "redirect_uri": CONFIG.ASGARDEO_REDIRECT_URL,
             "scope": "openid accounts transactions",
             "consentID": consent_id

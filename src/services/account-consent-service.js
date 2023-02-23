@@ -10,9 +10,7 @@ export const generateAccountAccessConsent = async (app_access_token) => {
         headers: {
             "Content-Type": "application/json",
             "accept": "application/json",
-            "Authorization": "Bearer " + app_access_token,
-            "consentServiceClientID": CONFIG.CHOREO_CONSENT_SERVICE_CONSUMER_KEY,
-            "consentServiceClientSecret": CONFIG.CHOREO_CONSENT_SERVICE_SECRET
+            "Authorization": "Bearer " + app_access_token
         },
         data: new AccountAccessConsent()
     };
