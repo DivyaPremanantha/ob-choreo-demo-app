@@ -12,6 +12,7 @@ var weekly = '$423.20'
 var monthly = '$1237.01'
 var user_access_token = sessionStorage.getItem(CONSTANTS.user_access_token)
 
+
 export const ExpenseView = () => {
   const [response, setResponse] = useState();
 

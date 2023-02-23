@@ -29,12 +29,12 @@ export const getUserAccessToken = async (code, app_access_token) => {
         },
         params: {
             "code": code,
-            "clientId": CONFIG.ASGARDEO_APP_CONSUMER_KEY,
-            "clinetSecret": CONFIG.ASGARDEO_APP_CONSUMER_SECRET,
+            "scope": "openid accounts transactions",
             "redirectURI": CONFIG.ASGARDEO_REDIRECT_URL,
             "choreoKey": CONFIG.CHOREO_APP_CONSUMER_KEY,
             "choreoSecret": CONFIG.CHOREO_APP_CONSUMER_SECRET
         }
     };
+
     return await get(requestConfig);
 }
