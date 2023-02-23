@@ -48,7 +48,7 @@
         },
         "ProprietaryBankTransactionCode": {
             "Code": "Transfer",
-            "Issuer": "CitizensFirstBank"
+            "Issuer": "FreeCitizenBank"
         },
         "Balance": {
             "Amount": {
@@ -78,7 +78,7 @@
         },
         "ProprietaryBankTransactionCode": {
             "Code": "Transfer",
-            "Issuer": "FreeCitizenBank"
+            "Issuer": "AbsoluteBank"
         },
         "Balance": {
             "Amount": {
@@ -108,7 +108,7 @@
         },
         "ProprietaryBankTransactionCode": {
             "Code": "Transfer",
-            "Issuer": "GoldcorpBank"
+            "Issuer": "NewCivilBank"
         },
         "Balance": {
             "Amount": {

@@ -18,12 +18,12 @@
     height: 15rem;
     border-radius: 15px;
     background-color: #ffffff;
-    overflow: scroll;
 }
 
 .slider-image {
-    height: 15rem;
     border-radius: 15px;
+    object-fit: cover;
+    height: 15rem;
 }
 
 .main-acc-container {
@@ -48,11 +48,11 @@
 
 
 .font-size-small {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
 }
 
 .font-size-medium {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 .font-color-orange {
@@ -76,8 +76,8 @@
     border-color: #465867;
     color: #ffffff;
     margin: 0 0.75rem;
-    width: 7rem;
-    font-size: 0.6rem;
+    width: 8rem;
+    font-size: 0.8rem;
     height: 2rem;
 }
 
@@ -117,9 +117,15 @@
 
 .account-list-button {
     margin: 0.5rem;
-    background-color: #465867;
+    background-color: var(--secondary);
     border-radius: 8px;
     height: 8rem;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.account-list-button:hover {
+    background-color: var(--primary);
 }
 
 .account-detail-view {
@@ -138,7 +144,7 @@
     color: #ffffff;
     width: 8rem;
     height: auto;
-    font-size: 13px;
+    font-size: 0.95rem;
     margin: auto;
     background-color: transparent;
     background-repeat: no-repeat;
@@ -147,9 +153,9 @@
     overflow: hidden;
     outline: none;
     --bs-btn-hover-color: #ffffff;
-    --bs-btn-hover-bg:  #465867;
+    --bs-btn-hover-bg:  transparent;
     --bs-btn-active-color: #ffffff;
-    --bs-btn-active-bg: #465867;
+    --bs-btn-active-bg: transparent;
 }
 
 .no-padding-element {

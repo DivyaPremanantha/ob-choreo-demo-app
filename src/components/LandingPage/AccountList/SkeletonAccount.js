@@ -8,15 +8,19 @@ export const SkeletonAccount = () => {
       <div className="col">
         <div className="account-list-view">
           <div className="account-detail-view">
-            <div className="col-10 no-padding-element text-align-left">
-              <Skeleton width={"100%"}></Skeleton>
-              <Skeleton width={"50%"}></Skeleton>
+            
+            <div className="row p-2">
+              <div className="col-2">
+                <Skeleton circle={true} height={32} width={32} />
+              </div>
+
+              <div className="col-8 mx-3">
+                <Skeleton width={"100%"}></Skeleton>
+                <Skeleton width={"50%"}></Skeleton>
+              </div>
             </div>
-            <div className="col-2 no-padding-element text-align-right">
-            </div>
-          </div>
-          <div className="account-detail-view font-color-dark">
-            <Skeleton width={"50%"}></Skeleton>
+            
+            <div className="row ms-5"><Skeleton /></div>
           </div>
         </div>
       </div>

@@ -14,7 +14,7 @@ export const MainAccDetailView = () => {
     <div className = "container-md main-acc-container" style={{"backgroundImage": `url(${background})`}}>
       
       <div className="row m-2 font-color-dark">
-        <div className="col-10">Main Funding Account</div>
+        <div className="col-10"><h5>Main Funding Account</h5></div>
       </div>
 
       <div className="row p-2 m-2">
@@ -34,7 +34,7 @@ export const MainAccDetailView = () => {
       </div>
       
       <div className="row m-2">
-        <Button onClick={handleShow} variant="primary" className="btn-grey transfer-button">Transfer Money</Button>
+        <Button onClick={handleShow} className="bg-secondary transfer-button">Transfer Money</Button>
 
         <Offcanvas show={show} onHide={handleClose} placement='end' className="home-container">
           <Offcanvas.Header closeButton>
