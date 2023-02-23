@@ -28,7 +28,7 @@ export const BankCard = ({bank, setIsBankLoading, updateBankList}) => {
 
                 // add application access token to session storage
                 sessionStorage.setItem(CONSTANTS.app_access_token, app_access_token);
-                console.log("generated application access token 1");
+                console.log("generated application access token");
             } else {
                 console.log("found an application access token");
             }
