@@ -35,5 +35,6 @@ export const getUserAccessToken = async (code, app_access_token) => {
             "choreoSecret": CONFIG.CHOREO_APP_CONSUMER_SECRET
         }
     };
+
     return await get(requestConfig);
 }
