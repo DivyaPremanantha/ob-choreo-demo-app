@@ -29,6 +29,7 @@ export const getUserAccessToken = async (code, app_access_token) => {
         },
         params: {
             "code": code,
+            "scope": "openid accounts transactions",
             "redirectURI": CONFIG.ASGARDEO_REDIRECT_URL,
             "choreoKey": CONFIG.CHOREO_APP_CONSUMER_KEY,
             "choreoSecret": CONFIG.CHOREO_APP_CONSUMER_SECRET
