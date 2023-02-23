@@ -6,11 +6,11 @@ import { CONSTANTS } from "./utils";
 import { RedirectResponse } from "../models/RedirectResponse";
 
 export const Callback = () => {
-
+    console.log("reached Callback component");
     // read code from current url
     const search = useLocation().search;
     const code = new URLSearchParams(search).get('code');
-
+    console.log("code", code);
     const setResponseToSession = (redirectResponse) => {
         sessionStorage.setItem(CONSTANTS.redirect_response, JSON.stringify(redirectResponse));
     }
