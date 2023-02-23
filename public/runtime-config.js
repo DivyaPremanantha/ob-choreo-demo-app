@@ -5,6 +5,6 @@ window.env = {
     CHOREO_APP_CONSUMER_KEY: "m35lKTGxoRrCtuLuG4GzNNS9vlga",
     CHOREO_APP_CONSUMER_SECRET: "GfsqaJ6rDfTN50l1HUR22iiK0Nga",
 
-    HOST_URL: "http://localhost:3000"
+    HOST_URL: "https://purple-bay-005990a00.2.azurestaticapps.net"
 };
   
