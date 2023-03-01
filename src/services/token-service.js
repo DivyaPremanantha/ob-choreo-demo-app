@@ -22,13 +22,14 @@ export const getUserAccessToken = async (code, app_access_token) => {
 
     const requestConfig = {
         method: "GET",
-        url: CONFIG.CHOREO_URL_USER_ACCESS_TOKEN_API,
+        url: CONFIG.CHOREO_TOKEN_URL,
         headers: {
             "accept": "application/json",
             "Authorization": "Bearer " + app_access_token
         },
         params: {
             "code": code,
+            "grant_type": "authorization_code",
             "scope": "openid accounts transactions",
             "redirectURI": CONFIG.ASGARDEO_REDIRECT_URL,
             "choreoKey": CONFIG.CHOREO_APP_CONSUMER_KEY,

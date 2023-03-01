@@ -3,7 +3,6 @@ export const CONFIG = {
     CHOREO_APP_CONSUMER_KEY: window.env.CHOREO_APP_CONSUMER_KEY,
     CHOREO_APP_CONSUMER_SECRET: window.env.CHOREO_APP_CONSUMER_SECRET,
     CHOREO_URL_AUTHORIZATION_API: window.env.CHOREO_API_HOST + "/authorizationapi/1.0.0/authorize",
-    CHOREO_URL_USER_ACCESS_TOKEN_API: window.env.CHOREO_API_HOST + "/useraccesstokenapi/1.0.0/userAccessToken",
     CHOREO_URL_OPEN_BANKING_API: window.env.CHOREO_API_HOST + "/accountsandtransactionapi/1.0.0/accountAccessConsent",
     ASGARDEO_REDIRECT_URL: window.env.HOST_URL + "/oauth2/callback",
     CHOREO_URL_TRANSACTIONS_API: window.env.CHOREO_API_HOST + "/accountsandtransactionapi/1.0.0/transactions",
