@@ -21,21 +21,14 @@ export const getAppAccessToken = async () => {
 export const getUserAccessToken = async (code, app_access_token) => {
 
     const requestConfig = {
-        method: "GET",
+        method: "POST",
         url: CONFIG.CHOREO_TOKEN_URL,
         headers: {
-            "accept": "application/json",
-            "Authorization": "Bearer " + app_access_token
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Authorization": getBasicAuthHeader(CONFIG.CHOREO_APP_CONSUMER_KEY, CONFIG.CHOREO_APP_CONSUMER_SECRET)
         },
-        params: {
-            "code": code,
-            "grant_type": "authorization_code",
-            "scope": "openid accounts transactions",
-            "redirectURI": CONFIG.ASGARDEO_REDIRECT_URL,
-            "choreoKey": CONFIG.CHOREO_APP_CONSUMER_KEY,
-            "choreoSecret": CONFIG.CHOREO_APP_CONSUMER_SECRET
-        }
+        data: qs.stringify({grant_type: 'authorization_code', code: code, redirect_uri: CONFIG.ASGARDEO_REDIRECT_URL})
     };
 
-    return await get(requestConfig);
+    return await post(requestConfig);
 }
